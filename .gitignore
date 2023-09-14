@@ -16,4 +16,4 @@ yarn-error.log
 **/env
 **/.venv
 
-#**/.arduino
+**/.arduino
