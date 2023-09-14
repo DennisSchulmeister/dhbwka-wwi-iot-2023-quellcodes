@@ -1,0 +1,71 @@
+(footprint "Thumb-Joystick_Sparkfun_COM-16273" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 0)
+  (attr through_hole)
+  (fp_text reference "REF**" (at 8 -6.25 unlocked) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 62ad5420-7a41-4d3b-8eec-d577846c0491)
+  )
+  (fp_text value "Thumb-Joystick_Sparkfun_COM-16273" (at 7.75 22.5 unlocked) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 2836f6a8-9023-4d7b-bf73-85d2fe74d6af)
+  )
+  (fp_text user "${REFERENCE}" (at 8.25 8 unlocked) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp a915ea65-de5d-4342-ab2a-e2ac1176ee70)
+  )
+  (fp_rect (start 2.5 13.5) (end 13 21) (layer "F.SilkS") (width 0.15) (fill none) (tstamp bca01bb7-c6e6-4f98-b1c8-ba541f5c8e71))
+  (fp_rect (start -3 -5) (end 19.5 21) (layer "F.SilkS") (width 0.15) (fill none) (tstamp d98dce9a-6319-4f84-8dee-95fb14cda6a2))
+  (fp_rect (start -3.25 -5.25) (end 19.75 21.25) (layer "F.CrtYd") (width 0.12) (fill none) (tstamp a1ea2551-fe32-4c39-9ba1-57e69d537f12))
+  (fp_rect (start 2.5 13.5) (end 13 21) (layer "F.Fab") (width 0.1) (fill none) (tstamp dc9767d3-c3c5-4708-9671-940d9a066504))
+  (fp_rect (start -3 -5) (end 19.5 21) (layer "F.Fab") (width 0.1) (fill none) (tstamp f889647c-9bed-4794-816c-54b8862e2341))
+  (pad "" thru_hole circle (at 0 13.3) (size 3 3) (drill 1.5) (layers *.Cu *.Mask) (tstamp 3618b6cd-bee0-48cc-9dc4-b2c9eb765572))
+  (pad "" thru_hole circle (at 15.5 13.3) (size 3 3) (drill 1.5) (layers *.Cu *.Mask) (tstamp 47b846a1-043c-4f40-a051-98e99517e8c6))
+  (pad "" thru_hole circle (at 15.5 0) (size 3 3) (drill 1.5) (layers *.Cu *.Mask) (tstamp 8ef65496-8a7b-4da0-8b32-06fe736136b0))
+  (pad "" thru_hole circle (at 0 0) (size 3 3) (drill 1.5) (layers *.Cu *.Mask) (tstamp eda28ec5-356b-4714-982f-e4a5d8b052cc))
+  (pad "1" thru_hole circle (at 17.5 4.15) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp a8ff1df8-6c65-4d8a-ab5f-b8b5c4677fd5))
+  (pad "2" thru_hole circle (at 17.5 6.65) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 5144e0e1-e742-4bd0-b241-8431aa577162))
+  (pad "3" thru_hole circle (at 17.5 9.15) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp d030dd32-6af2-44a1-8a1c-5586ba989810))
+  (pad "4" thru_hole circle (at 5.25 -3.1) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 902db494-0fb9-4799-b18a-582a42aa610b))
+  (pad "5" thru_hole circle (at 7.75 -3.1) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 45a727b2-e00f-47de-ac43-4527f464edf7))
+  (pad "6" thru_hole circle (at 10.25 -3.1) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 5c6968c3-6f62-4dd6-b9c8-0488cb9c62a4))
+  (pad "7" thru_hole circle (at 11 15) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 26a29b0e-5a54-41d4-878d-44e1e4836fa8))
+  (pad "7" thru_hole circle (at 4.5 15) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp d22f2073-88dd-4f43-8ecf-f9813f919527))
+  (pad "8" thru_hole circle (at 11 19.5) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp 61062f8c-22c9-45e1-aa5f-f81b3ef7f981))
+  (pad "8" thru_hole circle (at 4.5 19.5) (size 2 2) (drill 1) (layers *.Cu *.Mask) (tstamp f64447d4-8043-403d-aef8-422672c3af8c))
+  (group "" (id 108b91f2-b7b9-466d-90bf-34a392d69214)
+    (members
+      26a29b0e-5a54-41d4-878d-44e1e4836fa8
+      61062f8c-22c9-45e1-aa5f-f81b3ef7f981
+      d22f2073-88dd-4f43-8ecf-f9813f919527
+      f64447d4-8043-403d-aef8-422672c3af8c
+    )
+  )
+  (group "" (id 6d4427bc-d932-46a9-a821-8f49d67e4eac)
+    (members
+      45a727b2-e00f-47de-ac43-4527f464edf7
+      5c6968c3-6f62-4dd6-b9c8-0488cb9c62a4
+      902db494-0fb9-4799-b18a-582a42aa610b
+    )
+  )
+  (group "" (id aa693931-e1a3-4d74-ac18-fc9ac93cc0ff)
+    (members
+      3618b6cd-bee0-48cc-9dc4-b2c9eb765572
+      47b846a1-043c-4f40-a051-98e99517e8c6
+      8ef65496-8a7b-4da0-8b32-06fe736136b0
+      eda28ec5-356b-4714-982f-e4a5d8b052cc
+    )
+  )
+  (group "" (id c727159b-f1da-453b-8156-b98b98877bec)
+    (members
+      5144e0e1-e742-4bd0-b241-8431aa577162
+      a8ff1df8-6c65-4d8a-ab5f-b8b5c4677fd5
+      d030dd32-6af2-44a1-8a1c-5586ba989810
+    )
+  )
+  (model "${KIPRJMOD}/Library/Thumb-Joystick_Sparkfun_COM-16273.igs"
+    (offset (xyz 15.5 1 0))
+    (scale (xyz 0.99 1 1))
+    (rotate (xyz 0 0 180))
+  )
+)

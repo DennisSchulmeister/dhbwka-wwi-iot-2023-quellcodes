@@ -1,0 +1,17 @@
+**/node_modules
+**/build
+yarn-error.log
+**/.~*
+*.zip
+
+*.class
+*.log
+**/target/
+**/build/
+**/tododb/
+
+
+*.pyc
+**/__pycache__/
+**/env
+**/.venv
