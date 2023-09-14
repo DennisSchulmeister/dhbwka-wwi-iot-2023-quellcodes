@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "output": ".arduino/output",
+    "sketch": "HalloArduino-Aufgabe/HalloArduino-Aufgabe.ino"
+}

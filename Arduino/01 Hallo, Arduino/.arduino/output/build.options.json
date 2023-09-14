@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "/home/dennis/.arduino15/packages",
+  "otherLibrariesFolders": "/home/dennis/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/home/dennis/Documents/DHBW-Karlsruhe/# Wahlmodul IoT/Quellcodes/Arduino/01 Hallo, Arduino/HalloArduino-Aufgabe"
+}

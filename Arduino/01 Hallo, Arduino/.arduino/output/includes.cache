@@ -1,0 +1,17 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/dennis/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/dennis/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard"
+  },
+  {
+    "Sourcefile": "/home/dennis/Documents/DHBW-Karlsruhe/# Wahlmodul IoT/Quellcodes/Arduino/01 Hallo, Arduino/.arduino/output/sketch/HalloArduino-Aufgabe.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

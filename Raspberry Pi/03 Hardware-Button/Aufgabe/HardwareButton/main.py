@@ -3,7 +3,7 @@
 Hardware-Buttons entprellen
 ===========================
 
-gpiozeri macht es leicht, mit der Klasse DigitalInputDevice ein digitales Eingangssignal
+gpiozero macht es leicht, mit der Klasse DigitalInputDevice ein digitales Eingangssignal
 auszulesen. Mechanische Bauteile wie z.B. Hardware-Buttons können aber nicht einfach
 den Zustand von an nach aus oder umgekehrt wechseln. Sie pendeln bei jedem Wechseln
 eine Weile zwischen beiden Zuständen hin und her, bis der mechanische Kontakt sicher
