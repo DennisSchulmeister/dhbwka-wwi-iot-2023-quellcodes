@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 """
 Abgewandelte Version des Beispiels zum Entprellen von Hardware-Buttons. Im Original wird
 eine an GPIO 17 angeschlossene LED so lange eingeschaltet, wie ein an Pin 2 angeschlossener

@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 """
 Hallo, Welt für Raspberry Pi
 ============================
