@@ -59,6 +59,7 @@ from gpiozero import Button, DistanceSensor, Buzzer
 
 DISTANCE_MIN_CM    = 3.0;
 DISTANCE_MAX_CM    = 30.0;
+DISTANCE_INFINITY  = 99999;
 FREQUENCY_MIN_HZ   = 1.0;
 FREQUENCY_MAX_HZ   = 8.00;
 
@@ -73,10 +74,12 @@ def main():
         while True:
             time.sleep(0.001)
 
-            if not button.is_pressed:
-                continue
-            
-            distance_cm = sensor.distance * 100
+            if button.is_pressed:
+                print("Starte Messung")
+                distance_cm = sensor.distance * 100
+                print(f"Gemessene Distanz: {distance_cm} cm")
+            else:
+                distance_cm = DISTANCE_INFINITY
 
             if distance_cm < DISTANCE_MIN_CM:
                 buzzer.on()
