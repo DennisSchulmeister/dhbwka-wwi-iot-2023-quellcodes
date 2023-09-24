@@ -2,10 +2,9 @@
 Hallo, Welt für Raspberry Pi
 ============================
 
-Konfiguriert alle GPIO-Pins als digitale Ausgänge und schaltet diese
-jede Sekunde ein und wieder aus. Dadurch blinkt die eingebaute LED des
-Raspberry Pi sowie jedes angeschlossene Bauteil. Zusätzlich wird 
-Meldung auf der Konsole ausgegeben.
+Konfiguriert alle GPIO-Pins als digitale Ausgänge und schaltet diese jede
+Sekunde ein und wieder aus. Dadurch blinken alle angeschlossenen Bauteile.
+Zusätzlich wird eine Meldung auf der Konsole ausgegeben.
 
 Hardwareaufbau:
 ---------------
