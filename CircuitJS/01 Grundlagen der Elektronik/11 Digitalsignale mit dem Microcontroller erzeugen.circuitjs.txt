@@ -1,0 +1,40 @@
+$ 3 0.0000049999999999999996 10.20027730826997 50 5 50 5e-11
+x 29 -26 607 -23 4 24 Digitalsignale\smit\sdem\sMicrocontroller\serzeugen
+x 31 8 790 11 4 12 Wird\sauf\seinen\sdigitalen\sGPIO-Ausgang\seine\slogische\sEins\s(bzw.\sHIGH\sbeim\sArduino)\sgeschrieben,\sliegt\sdort\sje\snach\sLogikpegel
+x 31 26 769 29 4 12 des\sverwendeten\sMicrocontrollers\seine\sSpannung\svon\sz.B.\s5V\san.\sMit\sdieser\skönnen\skleine\sVerbraucher\sgeschaltet\swerden.
+x 31 45 767 48 4 12 Je\snach\sFunktionsweise\sder\sHardwareverschaltung\swird\sdabei\svon\seiner\s"Active\sHigh"\soder\s"Active\sLow"\sLogik\sgesprochen.
+x 31 84 169 87 4 16 Active\sHigh\sLogik
+x 31 103 814 106 4 12 Der\sDigitalausgang\smuss\sauf\sHIGH\sgeschaltet\swerden,\sum\sden\sVerbraucher\seinzuschalten.\sDie\sam\sAusgang\sanliegende\sSpannung
+x 31 120 291 123 4 12 kann\shierbei\snach\sGround/Masse\sabfließen.
+L 280 192 264 192 0 1 false 5 0
+w 280 192 304 192 2
+r 376 192 448 192 0 480
+162 448 192 504 192 2 default-led 1 0 0 0.01
+g 536 192 536 232 0 0
+w 504 192 536 192 0
+w 304 192 376 192 0
+b 240 160 328 216 0
+b 384 160 512 216 0
+x 240 155 357 158 4 10 Arduino\sDigitalausgang
+x 384 156 445 159 4 10 Verbraucher
+x 240 239 358 242 4 10 Auf\sL/H\sklicken,\sum\sden
+x 239 252 342 255 4 10 Ausgang\szu\sschalten
+x 239 484 342 487 4 10 Ausgang\szu\sschalten
+x 240 471 358 474 4 10 Auf\sL/H\sklicken,\sum\sden
+x 384 388 445 391 4 10 Verbraucher
+x 240 387 357 390 4 10 Arduino\sDigitalausgang
+b 384 392 512 448 0
+b 240 392 328 448 0
+w 304 424 376 424 0
+w 504 424 536 424 0
+162 504 424 448 424 2 default-led 1 0 0 0.01
+r 376 424 448 424 0 480
+w 280 424 304 424 2
+L 280 424 264 424 0 0 false 5 0
+x 31 328 826 331 4 12 kann\sdann\süber\sden\sDigitalausgang\snach\sGround/Masse\sabfließen.\sMerke:\sAusgang\sbedeutet\shier,\sdass\sdie\sSpannung\sdes\sGPIO-Pins
+x 31 311 832 314 4 12 Der\sDigitalausgang\smuss\sauf\sLOW\sgeschaltet\swerden,\sum\sden\sVerbraucher\seinzuschalten.\sDie\sam\sVerbraucher\sanliegende\sSpannung
+x 31 292 164 295 4 16 Active\sLow\sLogik
+x 30 345 718 348 4 12 über\sdie\sSoftware\sgesteuert\swird.\sDer\sWert\sLOW\sentspricht\s0V\sund\sdamit\seiner\sVerbdindung\sgegen\sGround/Masse.
+R 536 424 536 376 0 0 40 5 0 0 0.5
+x 392 472 711 475 4 10 Hinwes:\sDa\sLEDs\sden\sStrom\snur\sin\seine\sRichtung\sfließen\slassen,
+x 391 484 636 487 4 10 muss\sdie\sLED\shier\sumgekehrt\seingebaut\swerden.
