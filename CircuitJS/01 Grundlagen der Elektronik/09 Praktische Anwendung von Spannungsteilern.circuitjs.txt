@@ -20,9 +20,9 @@ x 851 385 1173 388 4 10 wir\shier\sdie\sVoltmeter\sund\sdamit\sdas\sangezeigte\s
 x 576 418 1680 421 4 12 Wie\swir\sgesehen\shaben,\smüssen\smehrere\sVerbraucher\sdaher\simmer\s"parallel"\sund\snicht\s"in\sReihe"\sgeschaltet\swerden.\sDoch\sauch\seine\sReihenschaltung\skann\sgelegentlich\snützlich\ssein.
 x 574 478 851 481 4 16 Inkompatible\sLogikpegel\sanpassen
 x 575 500 1601 503 4 12 Die\smeisten\sArduino-Boards\sarbeiten\smit\sdem\shistorischen\sLogikpegel\svon\s5V,\ssignalisieren\seine\slogische\sEins\sdaher\smit\seiner\sSpannung\svon\sca.\s5V\sund\seine\slogische\sNull
-x 576 518 1624 521 4 12 mit\sca.\s0V\s(also\seiner\sVerbindung\smit\sMasse).\sBei\sden\s0V\ssind\ssich\salle\sDigitalbausteine\seinig.\sBei\sden\s5V\sallerdings\snicht.\sModerne\sBauteile\sarbeiten,\sum\sStrom\sund\sAbwärme
-x 574 536 1593 539 4 12 zu\ssparen,\stypischerweise\smit\s3,3V\soder\sweniger\s(2,4V\sund\s1,8V\ssind\sebenfalls\shäufig\sanzutreffen).\sWas\salso\stun,\swenn\sein\s5V\sGPIO-Ausgang\sdes\sArduino\smit\seinem\s3,3V
-x 575 554 1449 557 4 12 Digitaleingangs\seines\sanderen\sBausteins\sverbunden\swerden\ssoll?\sEine\sMöglichkeit\swäre,\smit\szwei\sWiderständen\seinen\sSpannungsteiler\szu\sbauen:
+x 576 518 1582 521 4 12 mit\sca.\s0V\s(also\seiner\sVerbindung\sgegen\sMasse).\sBei\sden\s0V\ssind\ssich\salle\sDigitalbausteine\seinig.\sBei\sden\s5V\sallerdings\snicht.\sModerne\sBauteile\sarbeiten,\sum\sStrom\sund
+x 574 536 1582 539 4 12 Abwärem\szu\ssparen,\stypischerweise\smit\s3,3V\soder\sweniger\s(2,4V\sund\s1,8V\ssind\sebenfalls\shäufig\sanzutreffen).\sWas\salso\stun,\swenn\sein\s5V\sGPIO-Ausgang\sdes\sArduino\smit
+x 575 554 1515 557 4 12 einem\s3,3V\sDigitaleingang\seines\sanderen\sBausteins\sverbunden\swerden\ssoll?\sEine\sMöglichkeit\swäre,\smit\szwei\sWiderständen\seinen\sSpannungsteiler\szu\sbauen:
 L 944 624 912 624 0 1 false 5 0
 w 944 624 976 624 2
 r 976 624 1040 624 0 560
@@ -35,9 +35,9 @@ x 747 617 877 620 4 10 Arduino:\sZum\sUmschalten
 x 745 633 891 636 4 10 des\sAusgangs\sauf\sL/H\sklicken
 x 1083 706 1263 709 4 10 Digitaleingang\seines\s3,3V-Bausteins
 x 1161 624 1462 627 4 10 Hinweis:\sUm\saus\sdem\sArduino\snicht\szu\sviel\sStrom\szu\sziehen,
-x 1161 638 1466 641 4 10 bieten\ssich\sWiderstände\sum\sdie\s1\skOhm\san,\swie\shier\sgezeigt.
+x 1161 638 1470 641 4 10 bieten\ssich\sWiderstände\sum\sdie\s1\skOhm,\swie\shier\sgezeigt,\san.
 x 574 788 851 791 4 16 Spannungsabfall\sbei\seiner\sBatterie
-x 574 810 1596 813 4 12 Wollen\swir\smehrere\sGeräte\smit\sderselben\sBatterie\sbetrieben,\smüssen\swir\sdiese\sparallel\sschalten,\swie\swir\sgelernt\shaben.\sAngeblich\ssteht\sdann\sjedem\sVerbraucher\sdieselbe
+x 574 810 1619 813 4 12 Sollen\smehrere\sGeräte\smit\sderselben\sBatterie\sbetrieben\swerden,\smüssen\swir\sdiese\sparallel\sschalten,\swie\swir\sgelernt\shaben.\sAngeblich\ssteht\sdann\sjedem\sVerbraucher\sdieselbe
 x 575 828 1225 831 4 12 Spannung\szur\sVerfügung.\sIn\sder\sPraxis\sverringert\ssich\sjedoch\sdie\sSpannung\smit\sjedem\sVerbraucher.\sWarum?
 v 816 944 816 880 0 0 40 9 0 0 0.5
 w 816 880 848 880 2
