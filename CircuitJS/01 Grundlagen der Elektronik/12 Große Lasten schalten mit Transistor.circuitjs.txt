@@ -41,7 +41,7 @@ w 624 224 552 224 0
 x 31 593 890 596 4 12 Zunächst\smuss\sanhand\sdes\sβ-Faktors\sdes\sTransistors\s(ließ\s"Beta-Faktor",\sim\sDatenblatt\soft\shFE\sabgekürzt)\sund\sder\szu\sschaltenden\sStromstärke
 x 31 570 381 573 4 16 Berechnung\sdes\sbenötigten\sVorwiderstands
 x 31 611 705 614 4 12 die\sStromstärke\sdes\sSteuerstroms\sberechnet\swerden:\sI_Basis\s\q\sI_Collector\s/\sβ\s\s\s\s→\sEin\stypischer\sβ-Faktor\sist\s200.
-x 32 630 576 633 4 12 Wollen\swir\swir\soben\sca.\s400\smA\sschalten\sergibt\ssich\sdaraus:\sI_Basis\s\q\s400mA\s/\s200\s\q\s2mA
+x 32 630 583 633 4 12 Wollen\swir\swie\soben\sca.\s400\smA\sschalten,\sergibt\ssich\sdaraus:\sI_Basis\s\q\s400mA\s/\s200\s\q\s2mA
 x 30 667 801 670 4 12 Mit\sdem\sOhmschen\sGesetz\skann\sdann\sanhand\sSpannung\sund\sStromstärke\sder\sWiderstand\sberechnet\swerden:\sR\s\q\sU\s/\sI\s\s\s\sAber\s...
 x 31 686 750 689 4 12 Allerdings\smuss\sder\sSpannungsabfall\svon\s0,7V\szwischen\sBasis\sund\sEmitter\sberücksichtigt\swerden:\sU\s\q\s5V\s-\s0,7V\s\q\s4,3V
 x 32 705 795 708 4 12 Eselsbrücke:\sWegen\sder\sdirekten\sVerbindung\szu\sGround\sist\sdie\sSpannung\sbeim\sEmitter\s0V.\sAm\sTransistor\sfallen\simmer\s0,7V\sab.
