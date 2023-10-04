@@ -1,0 +1,55 @@
+$ 3 0.0000049999999999999996 42.05934401203833 40 5 50 5e-11
+x 29 -26 469 -23 4 24 Große\sLasten\sschalten\smit\sTransistor
+x 31 8 703 11 4 12 Typischerweise\sdürfen\sje\snach\sMicrocontroller\snur\sca.\s10mA\san\seinem\sGPIO-Digitalausgang\sabgegriffen\swerden.
+x 31 26 706 29 4 12 Zusätzlich\sdarf\sdie\sSumme\saller\sentnommenen\sStröme\seinen\sMaximalwert\svon\sbspw.\s40mA\snicht\süberschreiten.
+x 31 45 761 48 4 12 Größere\sVerbrauche\skönnen\sdaher\snicht\sdirekt\süber\sdie\sGPIO-Ausgänge\smit\sStrom\sversorgt\swerden.\sStattdessen\skann\sdie
+x 31 118 233 121 4 16 Transistorgrundschaltung
+L 328 344 296 344 0 1 false 5 0
+w 328 344 352 344 3
+b 280 312 376 368 0
+x 280 308 397 311 4 10 Arduino\sDigitalausgang
+x 280 391 398 394 4 10 Auf\sL/H\sklicken,\sum\sden
+x 279 404 382 407 4 10 Ausgang\szu\sschalten
+x 31 62 785 65 4 12 am\sDigitalausgang\sanliegende\sSpannung\sals\sSteuerspannung\sfür\seinen\sTransistor\soder\sein\sRelais,\sdie\swie\sein\sferngesteuerter
+x 30 79 286 82 4 12 Schalter\sfunktionieren,\sverwendet\swerden.
+t 504 344 552 344 2 1 -10.662376762000617 0.7508338877577192 200 default
+x 500 340 520 343 4 8 Basis
+x 560 329 595 332 4 8 Collector
+x 561 365 590 368 4 8 Emitter
+w 552 360 552 416 3
+g 552 416 552 424 0 0
+r 384 344 432 344 0 2100
+w 352 344 384 344 0
+415 552 224 552 272 0 0.5 1 0.15 0.15 0.002 0.05 100 0
+w 552 328 552 272 3
+R 552 224 552 192 0 0 40 12 0 0 0.5
+d 664 272 664 224 2 default
+w 664 272 552 272 0
+w 664 224 624 224 1
+w 432 344 504 344 2
+x 32 138 791 141 4 12 Mittlere\sLasten,\sdie\snicht\svollständig\svom\sStromkreis\sdes\sMicrocontrollers\sgalvanisch\sentkoppelt\swerden\smüssen,\skönnen\süber
+x 31 155 780 158 4 12 einen\sTransistor\sgeschaltet\swerden.\sFür\sdiesen\sZweck\sgibt\ses\sviele\sverschiedene\sTransistoren.\sWir\sschauen\suns\shier\saber\snur
+x 31 172 559 175 4 12 einen\seinfachen\sNPN-Transistor\san,\sden\swir\sals\s"stromgesteuerten\sSchalter"\sverwenden.
+x 32 469 875 472 4 12 Die\sFunktionsweise\sist\swie\sfolgt:\sLiegt\san\sder\sBasis\s(sozusagen\sdem\sSteuereingang)\sdes\sTransistors\seine\sSpannung\svon\smindestens\s0,7V\san,
+x 31 488 873 491 4 12 sorgt\sder\sStromfluss\s(in\sAmpere)\sdafür,\sdass\szwischen\sCollector\sund\sEmitter\sproportional\sdazu\sebenfalls\sein\sStrom\sfließen\skann.\sDie\sSumme
+x 30 508 882 511 4 12 fließt\sam\sEmitter\sab.\s(Anmerkung:\sZwischen\sBasis\sund\sEmitter\sfallen\sca\s0,7V\sSpannung\sab.\sDeshalb\smuss\sdie\sBasisspannung\smin.\s0,7V\ssein).
+x 730 223 1009 226 4 8 Schutzdiode,\sum\süberschüssige\sin\sder\sSpule\sdes\sMotors\sgespeicherte
+x 729 234 1022 237 4 8 Energie\sabzubauen,\swenn\sdie\sStromzufuhr\sbeendet\swird.\sOhne\ssie\swürde
+423 720 233 677 248 0
+x 729 245 1007 248 4 8 der\sReststrom\sin\sdie\sSchaltung\sabfließen\sund\sdiese\sggf.\sbeschädigen.
+w 624 224 552 224 0
+x 30 573 889 576 4 12 Zunächst\smuss\sanhand\sdes\sβ-Faktors\sdes\sTransistors\s(ließ\s"Beta-Faktor",\sim\sDatenblatt\soft\shFE\sabgekürzt)\sund\sder\szu\sschaltenden\sStromstärke
+x 30 550 380 553 4 16 Berechnung\sdes\sbenötigten\sVorwiderstands
+x 30 591 704 594 4 12 die\sStromstärke\sdes\sSteuerstroms\sberechnet\swerden:\sI_Basis\s\q\sI_Collector\s/\sβ\s\s\s\s→\sEin\stypischer\sβ-Faktor\sist\s200.
+x 31 610 575 613 4 12 Wollen\swir\swir\soben\sca.\s400\smA\sschalten\sergibt\ssich\sdaraus:\sI_Basis\s\q\s400mA\s/\s200\s\q\s2mA
+x 29 647 800 650 4 12 Mit\sdem\sOhmschen\sGesetz\skann\sdann\sanhand\sSpannung\sund\sStromstärke\sder\sWiderstand\sberechnet\swerden:\sR\s\q\sU\s/\sI\s\s\s\sAber\s...
+x 30 666 749 669 4 12 Allerdings\smuss\sder\sSpannungsabfall\svon\s0,7V\szwischen\sBasis\sund\sEmitter\sberücksichtigt\swerden:\sU\s\q\s5V\s-\s0,7V\s\q\s4,3V
+x 31 685 831 688 4 12 Eselsbrücke:\sDie\sSpannung\smuss\sbeim\sEmitter\s0V\sbetragen.\s0,7V\sfallen\sam\sTransistorab,\sso\sdass\s4,3V\sfür\sden\sVorwiderstand\sbleben.
+x 31 703 753 706 4 12 Mit\sder\sso\sreduzierten\sSpannung\skann\sder\sVorwiderstand\sausgerechnet\swerden:\sR\s\q\sU\s/\sI\s\s\s→\s4,3V\s/\s0,002A\s\q\s2100\sOhm
+423 672 304 718 303 0
+x 726 296 967 299 4 8 Die\s400mA\sergeben\ssich\shier\saus\sdem\sgeschalteten\sBauteil.
+x 726 308 989 311 4 8 Häufig\smuss\sstattdessen\sdie\sStromstärke\sdurch\seinen\sWiderstand
+x 726 320 832 323 4 8 explizit\sfestgelegt\swerden.
+x 727 364 1010 367 4 8 Allgeminer\sHinweis:\sElektromotoren\swerden\sam\seinfachsten\smit\seinem
+x 726 375 1038 378 4 8 Motortreiber-Baustein\s(meist\sals\sH-Brücke)\sanstatt\seinem\seinfachen\sTransistor
+x 726 386 1000 389 4 8 geschaltet.\sDer\sMotor\sdient\shier\snur\sals\sBeispiel\sfür\seine\sstarke\sLast.
