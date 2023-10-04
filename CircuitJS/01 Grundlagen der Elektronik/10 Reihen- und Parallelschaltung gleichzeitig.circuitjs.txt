@@ -5,7 +5,7 @@ x 575 205 1091 208 4 12 Wie\slassen\ssich\sdie\sSpannungen\sund\sStromstärken\s
 R 784 320 736 320 0 0 40 6 0 0 0.5
 r 832 320 928 320 0 100
 w 928 320 928 256 1
-w 928 320 928 384 1
+w 928 320 928 368 1
 r 928 256 1024 256 0 200
 r 928 384 1024 384 0 400
 w 1024 256 1024 320 1
@@ -47,3 +47,4 @@ w 960 960 960 912 0
 w 1024 960 1024 912 0
 x 574 1021 1010 1024 4 12 U1\s\q\sU_Gesamt\s*\sR1\s/\sR_Gesamt\s\s\s→\s6V\s*\s(100\sOhm\s/\s233\sOhm)\s≈\s2,57V
 x 575 1043 1047 1046 4 12 U2\s\q\sU_Gesamt\s*\sR_Ersatz\s/\sR_Gesamt\s\s\s→\s6V\s*\s(133\sOhm\s/\s233\sOhm)\s≈\s3,42V
+w 928 368 928 384 0
