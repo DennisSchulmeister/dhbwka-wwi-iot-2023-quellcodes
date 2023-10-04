@@ -68,7 +68,7 @@ w 912 944 992 944 0
 x 575 1022 1196 1025 4 12 Rechnen\swir\sden\sGesamtwiderstand\sder\sfünf\sVerbraucher\saus,\sist\sleichter\sersichtlich,\swas\shier\spassiert:
 w 912 1152 944 1152 0
 r 992 1088 1072 1088 0 50
-x 781 1196 974 1199 4 10 Ersatzschaltbild\seiner\s9V-Blockbatterie
+x 781 1196 1007 1199 4 10 Ersatzschaltbild\seiner\svollen\s9V-Blockbatterie
 b 784 1056 912 1183 0
 w 816 1152 912 1152 0
 r 848 1088 912 1088 0 4
@@ -80,3 +80,18 @@ p 944 1088 944 1152 3 0 0
 w 944 1088 992 1088 0
 w 1072 1152 944 1152 0
 x 573 1038 1569 1041 4 12 Die\sVerbraucher\sbilden\smit\sdem\sInnenwiderstand\sder\sBatterie\seinen\sSpannungsteiler,\swodurch\ssich\sdie\sverfügbare\sSpannung\san\sden\sKlemmen\sder\sBatterie\sreduziert.
+x 576 1221 1654 1224 4 12 Anhand\sdes\sInnenwiderstands\sder\sBatterie\slässt\ssich\sauch\serklären,\swarum\seine\sleere\sBatterie\sweniger\sSpannung\sliefert.\sDurch\sden\serhöhten\sInnenwiederstand\sder\sleeren\sBatterie
+x 575 1239 1647 1242 4 12 und\sden\sfesten\sWiderstand\sder\sangeschlossenen\sVerbraucher\sfällt\seine\shöhere\sSpannung\sbereits\sinnerhalb\sder\sBatterie\sab\sund\ssteht\sden\sVerbrauchern\ssomit\snicht\szur\sVerfügung.
+w 1072 1360 944 1360 0
+w 944 1296 992 1296 0
+p 944 1296 944 1360 3 0 0
+w 912 1296 944 1296 0
+w 1072 1296 1072 1360 0
+v 816 1360 816 1296 0 0 40 9 0 0 0.5
+w 816 1296 848 1296 2
+r 848 1296 912 1296 0 50
+w 816 1360 912 1360 0
+b 784 1264 912 1391 0
+x 781 1404 1008 1407 4 10 Ersatzschaltbild\seiner\sleeren\s9V-Blockbatterie
+r 992 1296 1072 1296 0 50
+w 912 1360 944 1360 0
