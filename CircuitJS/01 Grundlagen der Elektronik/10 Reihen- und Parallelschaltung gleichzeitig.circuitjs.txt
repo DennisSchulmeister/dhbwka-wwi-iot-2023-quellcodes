@@ -20,30 +20,30 @@ w 1024 464 1024 384 0
 w 1024 384 1024 320 1
 x 575 507 682 510 4 16 Stromstärken
 x 574 526 1235 529 4 12 Ersatzwiderstand\sder\srechten\sbeiden\sWiderstände:\sR_Ersartz\s\q\s1\s/\s(1\s/\s200\sOhm)\s\p\s(1\s/\s400\sOhm)\s≈\s133\sOhm
-x 574 543 1289 546 4 12 Durch\sdie\sgesamte\sSchaltung\sgezogene\sStromstärke:\sI\s\q\sU\s/\sR\s\s\s→\s\s\sI_Gesamt\s\q\s6V\s/\s(100\sOhm\s\p\s133\sOhm)\s≈\s25,7\smA
+x 574 543 1286 546 4 12 Durch\sdie\sgesamte\sSchaltung\sfließende\sStromstärke:\sI\s\q\sU\s/\sR\s\s\s→\s\s\sI_Gesamt\s\q\s6V\s/\s(100\sOhm\s\p\s133\sOhm)\s≈\s25,7\smA
 w 896 592 864 592 1
 g 1024 592 1024 608 0 0
 r 896 592 960 592 0 100
 R 864 592 832 592 0 0 40 6 0 0 0.5
 r 960 592 1024 592 0 133.33
-x 576 648 1026 651 4 12 Aufteilen\sder\sGesamtstromstärke\sentlang\sder\sbeiden\srechten\sWiderstände:
-x 575 669 959 672 4 12 I_Oben\s\q\s25,7mA\s*\s((600\sOhm\s-\s200\sOhm)\s/\s600\sOhm)\s≈\s8,6mA
-x 574 690 962 693 4 12 I_Unten\s\q\s25,7mA\s*\s((600\sOhm\s-\s400\sOhm)\s/\s600\sOhm)\s≈\s17,mA
-x 574 725 965 728 4 12 Merke:\s600\sOhm\sist\sdie\sSumme\sder\sbeiden\srechten\sWiderstände.
-x 574 742 1216 745 4 12 Warum\swird\saber\sder\sjeweilige\sWiderstand\svon\sder\sGesamtsumme\sabgezogen\s(600\sOhm\s-\s200\sOhm\susw.)?
-x 575 759 1203 762 4 12 Weil\sein\shöhere\sWiderstand\szu\seiner\sgeringeren\sStromstärke\sführen\smuss,\swas\ssonst\snicht\sder\sFall\swäre!
-x 575 801 675 804 4 16 Spannungen
-x 575 825 1246 828 4 12 Da\sdie\srechten\sbeiden\sWiderstände\sparallel\sgeschaltet\ssind,\smuss\san\sihnen\sjeweils\sdieselbe\sSpannung\sabfallen.
-x 575 844 1327 847 4 12 Sie\skönnen\sdaher\szu\sihrem\sGesamtwiderstand\svon\sca.\s133\sOhm\szusammengefasst\swerden.\sÜbrig\sbleibt\sein\sSpannungsteiler:
-r 960 896 1024 896 0 133.33
-R 864 896 832 896 0 0 40 6 0 0 0.5
-r 896 896 960 896 0 100
-g 1024 944 1024 960 0 0
-w 896 896 864 896 0
-p 896 944 960 944 3 0 0
-p 960 944 1024 944 3 0 0
-w 896 944 896 896 0
-w 960 944 960 896 0
-w 1024 944 1024 896 0
-x 574 1005 1010 1008 4 12 U1\s\q\sU_Gesamt\s*\sR1\s/\sR_Gesamt\s\s\s→\s6V\s*\s(100\sOhm\s/\s233\sOhm)\s≈\s2,57V
-x 575 1027 1047 1030 4 12 U2\s\q\sU_Gesamt\s*\sR_Ersatz\s/\sR_Gesamt\s\s\s→\s6V\s*\s(133\sOhm\s/\s233\sOhm)\s≈\s3,42V
+x 576 664 1026 667 4 12 Aufteilen\sder\sGesamtstromstärke\sentlang\sder\sbeiden\srechten\sWiderstände:
+x 575 685 959 688 4 12 I_Oben\s\q\s25,7mA\s*\s((600\sOhm\s-\s200\sOhm)\s/\s600\sOhm)\s≈\s8,6mA
+x 574 706 962 709 4 12 I_Unten\s\q\s25,7mA\s*\s((600\sOhm\s-\s400\sOhm)\s/\s600\sOhm)\s≈\s17,mA
+x 574 741 965 744 4 12 Merke:\s600\sOhm\sist\sdie\sSumme\sder\sbeiden\srechten\sWiderstände.
+x 574 758 1216 761 4 12 Warum\swird\saber\sder\sjeweilige\sWiderstand\svon\sder\sGesamtsumme\sabgezogen\s(600\sOhm\s-\s200\sOhm\susw.)?
+x 575 775 1208 778 4 12 Weil\sein\shöherer\sWiderstand\szu\seiner\sgeringeren\sStromstärke\sführen\smuss,\swas\ssonst\snicht\sder\sFall\swäre!
+x 575 817 675 820 4 16 Spannungen
+x 575 841 1246 844 4 12 Da\sdie\srechten\sbeiden\sWiderstände\sparallel\sgeschaltet\ssind,\smuss\san\sihnen\sjeweils\sdieselbe\sSpannung\sabfallen.
+x 575 860 1327 863 4 12 Sie\skönnen\sdaher\szu\sihrem\sGesamtwiderstand\svon\sca.\s133\sOhm\szusammengefasst\swerden.\sÜbrig\sbleibt\sein\sSpannungsteiler:
+r 960 912 1024 912 0 133.33
+R 864 912 832 912 0 0 40 6 0 0 0.5
+r 896 912 960 912 0 100
+g 1024 960 1024 976 0 0
+w 896 912 864 912 0
+p 896 960 960 960 3 0 0
+p 960 960 1024 960 3 0 0
+w 896 960 896 912 0
+w 960 960 960 912 0
+w 1024 960 1024 912 0
+x 574 1021 1010 1024 4 12 U1\s\q\sU_Gesamt\s*\sR1\s/\sR_Gesamt\s\s\s→\s6V\s*\s(100\sOhm\s/\s233\sOhm)\s≈\s2,57V
+x 575 1043 1047 1046 4 12 U2\s\q\sU_Gesamt\s*\sR_Ersatz\s/\sR_Gesamt\s\s\s→\s6V\s*\s(133\sOhm\s/\s233\sOhm)\s≈\s3,42V
