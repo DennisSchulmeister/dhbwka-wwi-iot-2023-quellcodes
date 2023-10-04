@@ -45,7 +45,7 @@ x 32 630 583 633 4 12 Wollen\swir\swie\soben\sca.\s400\smA\sschalten,\sergibt\ss
 x 30 667 801 670 4 12 Mit\sdem\sOhmschen\sGesetz\skann\sdann\sanhand\sSpannung\sund\sStromstärke\sder\sWiderstand\sberechnet\swerden:\sR\s\q\sU\s/\sI\s\s\s\sAber\s...
 x 31 686 750 689 4 12 Allerdings\smuss\sder\sSpannungsabfall\svon\s0,7V\szwischen\sBasis\sund\sEmitter\sberücksichtigt\swerden:\sU\s\q\s5V\s-\s0,7V\s\q\s4,3V
 x 32 705 795 708 4 12 Eselsbrücke:\sWegen\sder\sdirekten\sVerbindung\szu\sGround\sist\sdie\sSpannung\sbeim\sEmitter\s0V.\sAm\sTransistor\sfallen\simmer\s0,7V\sab.
-x 32 723 607 726 4 12 Somt\sbleiben\s4,3V\sfür\sden\sWiderstand,\sum\sauf\sdie\s5V\sdes\sArduino-Digitalausgangs\szu\skommen.
+x 32 723 610 726 4 12 Somit\sbleiben\s4,3V\sfür\sden\sWiderstand,\sum\sauf\sdie\s5V\sdes\sArduino-Digitalausgangs\szu\skommen.
 423 672 304 718 303 0
 x 726 296 967 299 4 8 Die\s400mA\sergeben\ssich\shier\saus\sdem\sgeschalteten\sBauteil.
 x 726 308 989 311 4 8 Häufig\smuss\sstattdessen\sdie\sStromstärke\sdurch\seinen\sWiderstand

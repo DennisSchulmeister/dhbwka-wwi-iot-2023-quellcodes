@@ -1,0 +1,43 @@
+$ 3 0.0000049999999999999996 42.05934401203833 40 5 50 5e-11
+x 29 -26 423 -23 4 24 Große\sLasten\sschalten\smit\sRelais
+x 31 8 821 11 4 12 Sehr\shohe\sSpannungen,\sdie\sbei\seiner\sFehlfunktion\smitunter\slebensbedrohlich\ssein\soder\szumindest\shohe\sSchäden\sanrichten\skönnen,
+x 31 26 808 29 4 12 sollten\sin\ssicherheitskritischen\sAnwendungen\smechanisch\sgeschaltet\swerden.\sDies\serfolgt\sdurch\sein\sRelais,\sin\sdessen\sInneren\sder
+x 31 45 821 48 4 12 Steuerstrom\sein\sMagnetfeld\szum\sUmlegen\seines\sSchalters\serzeugt.\sHierdurch\sentsteht\sdas\stypische\sKlickgeräusch.\sDie\sSchaltdauer
+L 104 296 72 296 0 0 false 5 0
+w 104 296 128 296 3
+b 56 264 152 320 0
+x 56 260 173 263 4 10 Arduino\sDigitalausgang
+x 56 343 174 346 4 10 Auf\sL/H\sklicken,\sum\sden
+x 55 356 158 359 4 10 Ausgang\szu\sschalten
+x 31 62 830 65 4 12 ist\snatürlich\swesentlich\slänger\sals\sbei\seinem\sTransistor.\sDafür\swerden\sArbeitsstromkreis\sund\sSteuerstromkreis\svollständig\sentkoppelt.
+r 160 296 208 296 0 2000
+w 128 296 160 296 0
+w 208 296 248 296 0
+178 472 328 560 328 6 1 0.2 5.100000036880574e-12 0.05 1000000 0.02 20 0.015 0.005 0
+t 248 296 312 296 2 1 -4.99999998725 1.0097999972779588e-8 100 default
+R 312 184 312 136 0 0 40 5 0 0 0.5
+r 312 184 312 248 0 250
+g 312 392 312 416 0 0
+w 312 248 312 280 1
+w 312 312 312 360 1
+w 312 360 472 360 0
+b 384 112 36 445 0
+w 560 360 560 392 0
+R 472 176 472 152 0 1 50 240 0 0 0.5
+w 472 176 472 208 3
+w 472 208 472 328 0
+181 624 280 680 280 0 1884.3137523320847 100 240 0.025 0.025
+w 560 312 584 312 0
+181 728 344 784 344 0 315.25630548521394 100 240 0.025 0.025
+w 560 344 728 344 0
+g 784 344 784 360 0 0
+g 680 280 680 296 0 0
+w 584 312 584 280 0
+w 584 280 624 280 0
+w 560 392 312 392 0
+b 408 112 815 445 0
+x 35 109 120 112 4 10 Steuerstromkreis
+x 408 107 496 110 4 10 Arbeitsstromkreis
+x 31 498 774 501 4 12 Das\shier\seingezeichnete\sRelais\sschaltet\serst\sab\seinem\sSteuerstrom\svon\s20mA.\sUm\sden\sMicrocontroller\snicht\szu\süberlassten,
+x 30 514 547 517 4 12 wird\sder\sSteuerstrom\sdaher\smit\seinem\sTransistor\sverstärkt\s(siehe\svorheriges\sBeispiel).
+x 413 406 627 409 4 8 Diese\sVerbindung\sgehört\snoch\szum\sSteuerstromkreis.
