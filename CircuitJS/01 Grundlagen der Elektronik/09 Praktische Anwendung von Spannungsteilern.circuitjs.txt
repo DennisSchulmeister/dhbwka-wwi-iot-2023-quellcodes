@@ -1,0 +1,82 @@
+$ 1 0.000005 10.20027730826997 42 5 50 5e-11
+x 574 162 1118 165 4 24 Praktische\sAnwendung\svon\sSpannungsteilern
+x 575 188 1646 191 4 12 Mehrere\sWiderstände\sin\sReihe,\swie\sim\svorherigen\sBeispiel\sgezeigt,\swerden\saufgrund\sihres\sVerhaltens\s"Spannungsteiler"\sgenannt.\sSie\steilen\sdie\szur\sVerfügung\sstehende\sSpannung
+x 575 206 899 209 4 12 (und\sdamit\sdie\sEnergie\sje\sElektron)\suntereinander\sauf.
+w 1184 304 1184 256 0
+w 1088 304 1088 256 0
+w 992 304 992 256 0
+w 896 304 896 256 0
+p 1088 304 1184 304 3 0 0
+p 992 304 1088 304 3 0 0
+p 896 304 992 304 3 0 0
+R 896 256 832 256 0 0 40 5 0 0 0.5
+r 896 256 992 256 0 100
+r 992 256 1088 256 0 200
+r 1088 256 1184 256 0 400
+g 1184 304 1184 320 0 0
+x 851 359 1227 362 4 10 Anmerkung:\sDa\swir\shier\snicht\sden\sSpannungsabfall\szeigen\swollen,\ssondern,
+x 851 372 1220 375 4 10 wie\sdie\sGesamtspannung\sin\smehrere\sTeilspannungen\szerlegt\swird,\sdrehen
+x 851 385 1173 388 4 10 wir\shier\sdie\sVoltmeter\sund\sdamit\sdas\sangezeigte\sVorzeichen\sum.
+x 576 418 1680 421 4 12 Wie\swir\sgesehen\shaben,\smüssen\smehrere\sVerbraucher\sdaher\simmer\s"parallel"\sund\snicht\s"in\sReihe"\sgeschaltet\swerden.\sDoch\sauch\seine\sReihenschaltung\skann\sgelegentlich\snützlich\ssein.
+x 574 478 851 481 4 16 Inkompatible\sLogikpegel\sanpassen
+x 575 500 1601 503 4 12 Die\smeisten\sArduino-Boards\sarbeiten\smit\sdem\shistorischen\sLogikpegel\svon\s5V,\ssignalisieren\seine\slogische\sEins\sdaher\smit\seiner\sSpannung\svon\sca.\s5V\sund\seine\slogische\sNull
+x 576 518 1624 521 4 12 mit\sca.\s0V\s(also\seiner\sVerbindung\smit\sMasse).\sBei\sden\s0V\ssind\ssich\salle\sDigitalbausteine\seinig.\sBei\sden\s5V\sallerdings\snicht.\sModerne\sBauteile\sarbeiten,\sum\sStrom\sund\sAbwärme
+x 574 536 1593 539 4 12 zu\ssparen,\stypischerweise\smit\s3,3V\soder\sweniger\s(2,4V\sund\s1,8V\ssind\sebenfalls\shäufig\sanzutreffen).\sWas\salso\stun,\swenn\sein\s5V\sGPIO-Ausgang\sdes\sArduino\smit\seinem\s3,3V
+x 575 554 1449 557 4 12 Digitaleingangs\seines\sanderen\sBausteins\sverbunden\swerden\ssoll?\sEine\sMöglichkeit\swäre,\smit\szwei\sWiderständen\seinen\sSpannungsteiler\szu\sbauen:
+L 944 624 912 624 0 1 false 5 0
+w 944 624 976 624 2
+r 976 624 1040 624 0 560
+r 1040 624 1104 624 0 1000
+g 1104 624 1104 640 0 0
+368 1040 624 1040 720 1 0 Eingang
+b 900 597 980 645 0
+b 1007 698 1078 742 0
+x 747 617 877 620 4 10 Arduino:\sZum\sUmschalten
+x 745 633 891 636 4 10 des\sAusgangs\sauf\sL/H\sklicken
+x 1083 706 1263 709 4 10 Digitaleingang\seines\s3,3V-Bausteins
+x 1161 624 1462 627 4 10 Hinweis:\sUm\saus\sdem\sArduino\snicht\szu\sviel\sStrom\szu\sziehen,
+x 1161 638 1466 641 4 10 bieten\ssich\sWiderstände\sum\sdie\s1\skOhm\san,\swie\shier\sgezeigt.
+x 574 788 851 791 4 16 Spannungsabfall\sbei\seiner\sBatterie
+x 574 810 1596 813 4 12 Wollen\swir\smehrere\sGeräte\smit\sderselben\sBatterie\sbetrieben,\smüssen\swir\sdiese\sparallel\sschalten,\swie\swir\sgelernt\shaben.\sAngeblich\ssteht\sdann\sjedem\sVerbraucher\sdieselbe
+x 575 828 1225 831 4 12 Spannung\szur\sVerfügung.\sIn\sder\sPraxis\sverringert\ssich\sjedoch\sdie\sSpannung\smit\sjedem\sVerbraucher.\sWarum?
+v 816 944 816 880 0 0 40 9 0 0 0.5
+w 816 880 848 880 2
+r 848 880 912 880 0 4
+w 816 944 912 944 0
+b 784 848 912 975 0
+x 781 988 974 991 4 10 Ersatzschaltbild\seiner\s9V-Blockbatterie
+r 992 880 992 944 0 250
+w 992 880 1072 880 0
+w 992 944 1072 944 0
+r 1072 880 1072 944 0 250
+w 1232 880 1312 880 0
+w 1232 944 1312 944 0
+r 1312 880 1312 944 0 250
+w 1312 880 1392 880 0
+w 1312 944 1392 944 0
+p 1392 880 1392 944 3 0 0
+r 1152 880 1152 944 0 250
+w 1072 944 1152 944 0
+w 1072 880 1152 880 0
+r 1232 880 1232 944 0 250
+w 1152 944 1232 944 0
+w 1152 880 1232 880 0
+b 1344 848 1466 976 0
+x 1342 989 1524 992 4 10 Uns\ssind\s0,7V\sverlorgen\sgegangen?!
+w 912 880 992 880 0
+w 912 944 992 944 0
+x 575 1022 1196 1025 4 12 Rechnen\swir\sden\sGesamtwiderstand\sder\sfünf\sVerbraucher\saus,\sist\sleichter\sersichtlich,\swas\shier\spassiert:
+w 912 1152 944 1152 0
+r 992 1088 1072 1088 0 50
+x 781 1196 974 1199 4 10 Ersatzschaltbild\seiner\s9V-Blockbatterie
+b 784 1056 912 1183 0
+w 816 1152 912 1152 0
+r 848 1088 912 1088 0 4
+w 816 1088 848 1088 2
+v 816 1152 816 1088 0 0 40 9 0 0 0.5
+w 1072 1088 1072 1152 0
+w 912 1088 944 1088 0
+p 944 1088 944 1152 3 0 0
+w 944 1088 992 1088 0
+w 1072 1152 944 1152 0
+x 573 1038 1569 1041 4 12 Die\sVerbraucher\sbilden\smit\sdem\sInnenwiderstand\sder\sBatterie\seinen\sSpannungsteiler,\swodurch\ssich\sdie\sverfügbare\sSpannung\san\sden\sKlemmen\sder\sBatterie\sreduziert.
