@@ -2,11 +2,10 @@ $ 1 0.000005 10.20027730826997 50 5 50 5e-11
 x 574 162 1047 165 4 24 Reihenschaltung\smehrerer\sVerbraucher
 x 575 188 1401 191 4 12 Schalten\swir\sdie\sVerbraucher\saus\sdem\svorherigen\sBeispiel\snicht\sparallel,\ssondern\s"in\sReihe",\sbeobachten\swir\sein\smerkwürdiges\sVerhalten:
 x 575 206 1347 209 4 12 Den\seinzelnen\sBauteilen\ssteht\snur\snoch\sein\sBruchteil\sder\sSpannung\sund\ssomit\sauch\snur\sein\sBruchteil\sder\sEnergie\szur\sVerfügung!
-w 576 144 576 992 0
 R 896 256 832 256 0 0 40 5 0 0 0.5
-r 896 256 992 256 0 1000
-r 992 256 1088 256 0 2000
-r 1088 256 1184 256 0 4000
+r 896 256 992 256 0 100
+r 992 256 1088 256 0 200
+r 1088 256 1184 256 0 400
 g 1184 256 1184 320 0 0
 368 896 256 896 320 0 0
 368 992 256 992 320 0 0
@@ -19,15 +18,15 @@ x 575 470 1493 473 4 12 Es\shandelt\ssich\sum\seinen\sEnergietransfer,\sbei\sdem
 x 575 488 1395 491 4 12 Die\sElektronen\swerden\ssozusagen\smit\sEnergie\saufgeladen,\swodurch\ssie\sgleichzeitig\sangeregt\swerden,\ssich\sdurch\sden\sLeiter\szu\sbewegen.
 x 575 522 1437 525 4 12 Auf\sihrem\sWeg\sdurch\sden\sStromkreis\s"verrichten\sdie\sElektronen\sArbeit"\sund\sverlieren\sdadurch\sihre\saufgeladene\sEnergie\swieder\sStück\sfür\sStück.
 x 575 540 1420 543 4 12 Ein\stypischer\sKohlefaserwiderstand,\swie\ser\ssehr\shäufig\sverbaut\swird,\swandelt\sdie\selektrische\sEnergie\sbeispielsweise\sschlicht\sin\sAbwärme\sum.
-x 573 626 1534 629 4 12 Diese\snegative\sGegenspannung,\sum\sdie\ssich\sdie\sQuellspannung\sjeweils\svermindert,\swird\s"Spannungsabfall"\sgenannt.\sDie\sQuellspannung\sfällt\sein\sStückchen\sab.
+x 574 625 1535 628 4 12 Diese\snegative\sGegenspannung,\sum\sdie\ssich\sdie\sQuellspannung\sjeweils\svermindert,\swird\s"Spannungsabfall"\sgenannt.\sDie\sQuellspannung\sfällt\sein\sStückchen\sab.
 x 575 557 1522 560 4 12 Jeder\sWiderstand\sverringert\sdie\sSpannung\sein\swenig,\sbis\swir\sam\sEnde\simmer\sbei\s0V\sangekommen\ssind!\sDies\sergibt\ssich\saus\sder\sKirchhoffschen\sMaschenregel
 x 573 576 1367 579 4 12 (auf\sengl.\sleichter\s"Kirchhoff\sVoltage\sLaw"\sgenannt):\sDie\sSumme\saller\sTeilspannungen\sin\seinem\sStromkreis\smuss\simmer\s0V\sergeben.
 x 575 607 1346 610 4 12 Hierfür\sstellt\sman\ssich\svor,\sdass\sjedes\sBauteil\seine\snegative\sGegenspannung\sverursacht,\sdie\sder\sQuellspannung\sentgegen\swirkt.
-x 574 645 1566 648 4 12 Hier\sdeshalb\snun\sderselbe\sStromkreis\smit\sVerdeutlichung\sdes\sjeweiligen\sSpannungsabfalls.\sDie\srunden\sVoltmeter\szeigen,\sum\swie\sviel\sdie\sSpannung\sjeweils\sabnimmt.
+x 575 645 1541 648 4 12 Hier\sdeshalb\sderselbe\sStromkreis\smit\sVerdeutlichung\sdes\sjeweiligen\sSpannungsabfalls.\sDie\srunden\sVoltmeter\szeigen,\sum\swie\sviel\sdie\sSpannung\sjeweils\sabnimmt.
 g 1184 784 1184 800 0 0
-r 1088 688 1184 688 0 4000
-r 992 688 1088 688 0 2000
-r 896 688 992 688 0 1000
+r 1088 688 1184 688 0 400
+r 992 688 1088 688 0 200
+r 896 688 992 688 0 100
 R 896 688 832 688 0 0 40 5 0 0 0.5
 p 992 736 896 736 3 0 0
 p 1088 736 992 736 3 0 0
@@ -39,5 +38,21 @@ w 1184 736 1184 688 0
 p 1184 784 896 784 3 0 0
 w 896 784 896 736 0
 w 1184 784 1184 736 0
-x 576 845 1519 848 4 12 Wie\sman\ssieht,\sverhält\ssich\sder\sSpannungsabfall\sproportional\szu\sden\sWiderstandswerten:\sBei\s2\skOhm\sfällt\sdoppelt\sso\sviel\sSpannung\sab,\swie\sbei\s1\skOhm\susw.
+x 576 845 1535 848 4 12 Wie\sman\ssieht,\sverhält\ssich\sder\sSpannungsabfall\sproportional\szu\sden\sWiderstandswerten:\sBei\s200\sOhm\sfällt\sdoppelt\sso\sviel\sSpannung\sab,\swie\sbei\s100\sOhm\susw.
 x 574 865 1585 868 4 12 Die\sabsoluten\sWiderstandswerte\ssind\sdabei\sirrelevant\s(da\swir\shier\sdie\sStromstärke\snicht\sbetrachten).\sFür\sden\sSpannungsabfall\szählt\snur\sdas\sVerhältnis\sder\sWiderstände.
+w 1424 736 1424 688 0
+w 1328 736 1328 688 0
+p 1424 736 1328 736 3 0 0
+R 1328 688 1264 688 0 0 40 5 0 0 0.5
+r 1328 688 1424 688 0 100
+g 1424 736 1424 752 0 0
+x 1437 692 1677 695 4 10 Zum\sVergleich:\sHier\sfällt\sdie\sgesamte\sSpannung
+x 1437 706 1692 709 4 10 an\snur\seinem\sWiderstand\sab.\sDie\sWiderstand\smuss
+x 1436 721 1702 724 4 10 daher\sviel\smehr\s"Energie\sverbraten".\sEr\swird\sdeutlich
+x 1436 734 1640 737 4 10 wärmer\sals\sim\sStromkreis\slinks\sdaneben.
+x 574 906 785 909 4 16 Mathematische\sHerleitung
+x 575 928 1165 931 4 12 In\sReihe\sgeschaltete\sWiderstände\saddieren\ssich\sauf.\sEs\sgilt\sdaher:\sR_Gesamt\s\q\sR1\s\p\sR2\s\p\sR3\s\p\s…
+x 575 946 1251 949 4 12 Damit\skönnen\swir\sdie\sStromstärke\sberechnen,\sdie\sdiese\sSchaltung\s"zieht":\sI\s\q\sU\s/\sR\s\s\s→\s\s\s5V\s/\s700\sOhm\s≈\s7,1\smA
+x 574 965 1432 968 4 12 Anhand\svon\sStromstärke\sund\sWiderstand\skönnen\swir\swiederum\sdie\sTeilspannungen\sberechnen:\sU\s\q\sR\s*\sI\s\s\s→\s\s\s100\sOhm\s*\s0,0071\sA\s≈\s0,7V\susw.
+x 575 1001 1278 1004 4 12 Alternativ\shätten\swir\sdie\sTeilspannungen\sauch\sdirekt\sausrechnen\skönnen:\sU1\s\q\sU_Gesamt\s*\sR1\s/\s(R1\s\p\sR2\s\p\sR3)\susw.
+x 575 1020 901 1023 4 12 Zum\sBeispiel:\sU1\s\q\s5V\s*\s(100\sOhm\s/\s700\sOhm)\s≈\s0,7V
