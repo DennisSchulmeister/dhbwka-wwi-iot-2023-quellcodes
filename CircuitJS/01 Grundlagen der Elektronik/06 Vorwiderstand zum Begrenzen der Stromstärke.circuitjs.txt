@@ -1,0 +1,35 @@
+$ 1 0.000005 10.20027730826997 50 5 50 5e-11
+x 574 162 1142 165 4 24 Vorwiderstand\szum\sBegrenzen\sder\sStromstärke
+x 575 188 1459 191 4 12 Je\snach\sMicrocontroller\sdürfen\san\seinem\sGPIO-Ausgang\snicht\smehr\sals\sca.\s15\smA\sentnommen\swerden.\sAnhand\sdes\sOhmschen\sGesetzes\swissen\swir,
+x 574 205 1386 208 4 12 dass\sdies\svom\sWiderstand\sdes\sdaran\sangeschlossenen\sBauteils\sabhängt.\sSchauen\swir\suns\sdies\sfür\seinen\sArduino\smit\s5V\sLogikpegel\san:
+L 864 304 800 304 0 0 false 5 0
+r 864 304 960 304 0 500
+370 1104 304 1184 304 1 0 0
+g 1184 304 1184 352 0 0
+b 1120 272 1175 323 0
+x 794 331 1012 334 4 10 L/H\sanklicken,\sum\sden\sAusgang\szu\sschalten
+x 849 252 1005 255 4 10 Widerstand\sals\sErsatzschaltbild
+x 849 265 1005 268 4 10 für\sdas\sangeschlossene\sBauteil
+w 960 304 1104 304 0
+x 1119 266 1230 269 4 10 entnommenen\sStroms
+x 1119 253 1233 256 4 10 Gemessene\sStärke\sdes
+x 574 406 1440 409 4 12 Ein\spraktischer\sAnwendungsfall\skönnte\seine\san\seinem\sGPIO-Ausgang\shängende\sLED\ssein.\sIhr\seigener\sWiderstand\sist\sso\sgering,\sdass\ser\spraktisch
+x 574 423 1449 426 4 12 nicht\sins\sGewicht\sfällt.\sWir\sbenötigen\sdaher\seinen\s"Vorwiderstand",\sum\sdie\sStromzufuhr\szu\sbegrenzen.\sEinerseits,\sum\sden\sMicrocontroller\snicht\szu
+x 574 439 1445 442 4 12 überlasten,\sandererseits\saber\sauch,\sweil\sdie\sLED\sselbst\snicht\smehr\sals\s20\smA\sverträgt.\sMit\sdem\sOhmschen\sGesetz\skönnen\swir\sden\sVorwiderstand
+x 574 455 1438 458 4 12 leicht\sberechnen.\sAllerdings\smüssen\swir\sdabei\sals\sBesonderheit\svon\sLEDs\sca.\s2,2V\sVorwärtsspannung\svon\sden\s5V\sdes\sGPIO-Ausgangs\sabziehen.
+x 1102 487 1216 490 4 10 Gemessene\sStärke\sdes
+x 1102 500 1213 503 4 10 entnommenen\sStroms
+x 810 500 967 503 4 10 der\sentnommenen\sStromstärke
+x 810 487 963 490 4 10 Vorwiderstand\szur\sBegrenzung
+x 794 571 1012 574 4 10 L/H\sanklicken,\sum\sden\sAusgang\szu\sschalten
+b 1101 512 1188 563 0
+g 1184 544 1184 592 0 0
+370 1104 544 1184 544 1 0 0
+r 832 544 896 544 0 300
+L 832 544 800 544 0 0 false 5 0
+162 896 544 1104 544 2 default-led 1 0 0 0.01
+x 574 668 653 671 4 16 Randnotiz
+x 575 687 1385 690 4 12 Tatsächlich\shandelt\ses\ssich\sbei\seiner\sLeuchtdiode\s(LED\s\q\sLight\sEmitting\sDiode)\sum\sein\ssog.\s"nicht-lineares\sBauteil",\sdessen\sWiderstand
+x 575 703 1425 706 4 12 von\sder\sangelegten\sSpannung\sabhängt.\sDiese\sEigenschaft\sverleiht\seiner\sDiode\sihre\smaßgebliche\sEigenschaft,\sden\sStrom\snur\sin\seine\sRichtung
+x 573 720 1441 723 4 12 durchzulassen:\sFür\skleine\soder\sgar\snegative\sSpannungen\sist\sder\sWiderstand\ssehr\shoch\sund\snimmt\serst\sab\sca.\s0,7V\smerklich\sab.\sDer\statsächliche
+x 573 737 1484 740 4 12 Wert\sist\sfür\sden\sgezeigten\sAnwendungsfall\sdann\sso\sklein,\sdass\ser\svernachlässigt\swerden\skann\sund\swir\s"die\sDiode\slässt\sden\sStrom\sdurch"\ssagen\skönnen.

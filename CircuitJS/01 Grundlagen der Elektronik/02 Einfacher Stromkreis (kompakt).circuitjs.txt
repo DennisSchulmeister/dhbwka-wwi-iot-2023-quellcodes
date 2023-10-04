@@ -1,0 +1,12 @@
+$ 3 0.0000049999999999999996 10.20027730826997 50 5 50 5e-11
+r 200 120 304 120 0 470
+162 304 120 400 120 2 default-led 1 0 0 0.01
+x 75 119 126 122 4 8 Angedeutete
+x 220 94 374 97 4 8 Widerstand\sund\sLED\sals\s"Verbraucher"
+x 33 -28 413 -25 4 24 Einfacher\sStromkreis\s(kompakt)
+x 33 6 466 9 4 12 Dies\sist\sdasselbe\sBeispiel\swie\szuvor.\sUm\sdie\sZeichnung\szu\svereinfachen,
+x 33 24 370 27 4 12 wird\sder\sStromkreis\sjedoch\snicht\svollständig\sgezeichnet.
+R 200 120 160 120 0 0 40 5 0 0 0.5
+g 400 120 400 208 0 0
+x 364 238 445 241 4 8 Masse\s/\sGround\s(0V)
+x 75 129 144 132 4 8 Spannungsquelle

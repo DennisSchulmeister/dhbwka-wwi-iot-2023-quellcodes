@@ -1,0 +1,34 @@
+$ 3 0.0000049999999999999996 10.20027730826997 50 5 50 5e-11
+r 712 64 816 64 0 1000
+x 700 37 818 40 4 8 Widerstand\sals\s"Verbraucher"
+x -321 -157 -118 -154 4 24 Spannung\sin\sVolt
+x -321 -123 174 -120 4 12 Die\svon\seiner\sStromquelle\serzeugte\sSpannung\sgilt\sals\s"Ursache\sdes\sStromflusses".
+x -321 -105 154 -102 4 12 Sie\sbeschreibt,\swie\sviel\s"Energie"\sdie\sStromquelle\sauf\sdie\sElektronen\süberträgt.
+R 712 64 672 64 0 0 40 5 0 0 0.5
+g 816 64 816 104 0 0
+x 780 132 842 135 4 8 Masse\s/\sGround
+x -322 -89 229 -86 4 12 Die\sSpannung\swird\sin\sVolt\sgemessen\sund\sist\swie\sfolgt\sdefiniert:\s1\sVolt\s\q\s1\sJoule\s/\s1\sCoulumb
+x -323 -34 270 -31 4 12 1\sJoule\sist\sdie\sEnergie,\sdie\sbenötigt\swird,\sum\seine\sTafel\sSchokolade\s(100g)\seinen\sMeter\sanzuheben.
+x -323 -14 111 -11 4 12 1\sCoulumb\sentspricht\sca.\s6,2\s*\s10^18\s(6\sTrillionen)\sElektronenladungen.
+x -323 -51 -275 -48 4 16 Merke
+x -323 3 182 6 4 12 Die\sSpannung\skann\sdaher\svereinfacht\sals\s"Energie\sje\sElektron"\sinterpretiert\swerden.
+x -321 44 -197 47 4 16 Ground\s/\sMasse
+x -322 63 449 66 4 12 Die\sSpannung\swird\simmer\sals\sDifferenz\szwischen\szwei\sPunkten\sgemessen\sund\swird\sdaher\sauch\s"elektrisches\sPotential"\sgenannt.
+x -322 78 253 81 4 12 Denn\sdie\sSpannung\sregt\sden\sStromfluss\san,\sdurch\sden\spotentiell\sArbeit\sverrichtet\swerden\skann.
+x -322 94 375 97 4 12 Da\sStrom\simmer\svom\shöheren\sPotential\szum\sniedrigeren\sfließt,\swird\smeistens\sein\s"Ground"\soder\s"Masse"\sgenannter
+x -321 109 350 112 4 12 Bezugspunkt\sfestgelegt,\sauf\sden\ssich\salle\sSpannungsangaben\simplizit\sbeziehen,\swenn\snicht\sanders\sangegeben.
+x -323 125 55 128 4 12 Ground/Masse\sbesitzt\sdabei\sper\sDefinition\sein\sPotential\svon\s0V.
+x 780 144 847 147 4 8 Per\sDefinition\s0V
+x -320 162 17 165 4 16 Technische\svs.\statsächliche\sStromrichtung
+x -321 181 324 184 4 12 Ursprünglich\sging\sman\sdavon\saus,\sdass\sElektronen\swirklich\svom\shöheren\szum\sniedrigeren\sPotential\sfließen.
+x -321 197 305 200 4 12 Inzwischen\sweiß\sman,\sdass\ses\sgenau\sumgekehrt\sist.\sUnter\sdem\sNamen\s"technische\sStromrichtung"\swird
+x -321 214 295 217 4 12 die\sAnnahme\saber\saufrecht\serhalten,\sda\ssich\sin\sallen\sBerechnungen\snur\sdas\sVorzeichen\sändern\swürde.
+x -320 237 327 240 4 12 Unabhängig\sdavon\skann\seine\sSpannung\sjedoch\statsächlich\sauch\snegativ\ssein.\sDie\sElektronen\sbesitzen\sdann
+x -322 253 335 256 4 12 dieselbe\sEnergie\swie\sbei\sder\sgleichlautenden\spositiven\sSpannung,\sbewegen\ssich\saber\sin\sdie\sandere\sRichtung.
+g 816 192 816 232 0 0
+R 712 192 672 192 0 0 40 -5 0 0 0.5
+r 712 192 816 192 0 1000
+x 619 200 659 203 4 8 Spannung
+x 619 190 654 193 4 8 Negative
+x 619 62 649 65 4 8 Positive
+x 619 72 659 75 4 8 Spannung

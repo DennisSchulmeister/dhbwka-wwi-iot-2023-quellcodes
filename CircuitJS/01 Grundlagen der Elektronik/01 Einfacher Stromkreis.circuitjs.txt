@@ -1,0 +1,16 @@
+$ 3 0.0000049999999999999996 10.20027730826997 50 5 50 5e-11
+v 200 248 200 160 0 0 40 5 0 0 0.5
+w 400 120 400 288 0
+w 400 288 200 288 0
+r 200 120 304 120 0 470
+162 304 120 400 120 2 default-led 1 0 0 0.01
+x 89 205 171 208 4 8 Spannungsquelle\s5V
+x 180 192 195 195 4 18 \p
+x 186 222 193 225 4 20 -
+x 220 94 374 97 4 8 Widerstand\sund\sLED\sals\s"Verbraucher"
+x 33 -28 283 -25 4 24 Einfacher\sStromkreis
+x 33 6 486 9 4 12 Strom\sfließt\svom\sPluspol\sder\sSpannungsquelle\s(positive\sSpannung,\shier\s5V)
+x 33 24 446 27 4 12 zum\sMinuspol\sder\sSpannungsquelle\s(niedrigere\sSpannung,\smeist\s0V)
+w 200 160 200 120 2
+w 200 248 200 288 2
+x 89 214 163 217 4 6 (Langer\sStrich\s\q\sPluspol)

@@ -1,0 +1,69 @@
+$ 1 0.000005 10.20027730826997 50 5 50 5e-11
+x 574 162 1087 165 4 24 Mehrere\sVerbraucher\san\seiner\sStromquelle
+x 575 188 1403 191 4 12 Sollen\smehrere\sVerbraucher\svon\seiner\sStromquelle\sversorgt\swerden\s(beispielsweise\smehrere\sGeräte\svon\sderselben\sBatterie\soder\smehrere
+x 574 205 1437 208 4 12 LEDs\svom\sselben\sGPIO-Ausgang\seines\sMicrocontrollers),\smüssen\sdiese\s"parallel"\sgeschaltet\swerden,\sum\sjeweils\sdie\svolle\sSpannung\szu\serhalten.
+x 574 437 784 440 4 16 Entnommene\sStromstärke
+x 575 223 1393 226 4 12 Als\sEselsbrücke\skann\sman\ssich\sins\sGedächtnis\srufen,\sdass\sdie\sSpannung\simmer\sals\sDifferenz\szwischen\szwei\sPunkten\sgemessen\swird\sund
+x 573 240 1298 243 4 12 allen\sVerbraucher\sdieselbe\sSpannung\s(und\sdamit\sdieselbe\sEnergiemenge\sje\sElektron)\szur\sVerfügung\sgestellt\swerden\ssoll.
+r 864 304 864 384 0 1000
+r 976 304 976 384 0 2000
+r 1088 304 1088 384 0 4000
+w 864 304 976 304 0
+w 976 304 1088 304 0
+w 864 384 976 384 0
+w 976 384 1088 384 0
+v 768 384 768 304 0 0 40 5 0 0 0.5
+w 768 304 864 304 0
+w 768 384 864 384 0
+x 729 279 789 282 4 10 Stromquelle
+x 858 280 928 283 4 10 Verbraucher\s1
+x 968 279 1038 282 4 10 Verbraucher\s2
+x 1071 280 1141 283 4 10 Verbraucher\s3
+p 1200 304 1200 384 3 0 0
+w 1088 304 1200 304 0
+w 1088 384 1200 384 0
+b 1164 294 1247 394 0
+x 1263 305 1371 308 4 10 Verfügbare\sSpannung
+x 1263 320 1365 323 4 10 (Energie\sje\sElektron)
+x 575 463 1498 466 4 12 Die\s"Kirchhoffsche\sKnotenregel"\s(engl.\sleichter\sverständlich\sals\s"Kirchhoff\sCurrent\sLaw"\sbezeichnet)\sbesagt,\sdass\sin\seinem\slinearen\sWiderstandsnetzwerk,
+x 574 481 1459 484 4 12 wie\swir\ses\shier\svereinfachend\sbetrachten,\sdie\sSumme\sder\seingehenden\sStröme\sgleich\sder\sSumme\sder\sausgehenden\sStröme\s(jeweils\sin\sAmpere)\sist.
+x 574 500 1481 503 4 12 Da\swir\sanhand\svon\sSpannung\sund\sWiderstand\sden\sStromverbrauch\sjedes\seinzelnen\sVerbrauchers\sausrechnen\skönnen,\sergibt\ssich\sdaraus,\sdass\ssich\sdie
+x 574 518 1136 521 4 12 Stromstärken\saddieren\sund\ssomit\smit\sjedem\sweiteren\sVerbraucher\smehr\sStrom\sgezogen\swird.
+x 1263 577 1371 580 4 10 Verfügbare\sSpannung
+b 1170 566 1253 698 0
+w 1088 688 1200 688 0
+w 1088 576 1200 576 0
+p 1200 576 1200 688 3 0 0
+x 1071 552 1141 555 4 10 Verbraucher\s3
+x 968 551 1038 554 4 10 Verbraucher\s2
+x 858 552 928 555 4 10 Verbraucher\s1
+x 729 551 789 554 4 10 Stromquelle
+w 768 576 864 576 0
+v 768 656 768 576 0 0 40 5 0 0 0.5
+w 976 688 1088 688 0
+w 864 688 976 688 0
+w 976 576 1088 576 0
+w 864 576 976 576 0
+r 1088 576 1088 656 0 4000
+r 976 576 976 656 0 2000
+r 864 576 864 656 0 1000
+370 864 656 864 688 1 0 0
+370 976 656 976 688 1 0 0
+370 1088 656 1088 688 1 0 0
+370 864 688 768 688 1 0 0
+w 768 688 768 656 0
+x 785 718 902 721 4 10 Gesamte\sbeanspruchte
+x 784 731 934 734 4 10 Stromstärke\saller\sVerbraucher
+x 574 798 868 801 4 16 Berechnung\sdes\sGesamtwiderstands
+x 574 823 1438 826 4 12 Anhand\sdes\sOhmschen\sGesetzes\skönnen\swir\sausrechnen,\sdass\ssich\salle\sVerbraucher\szusammen\swie\sein\sWiderstand\smit\sca.\s570\sOhm\sverhalten:
+x 574 842 815 845 4 12 R\s\q\sU\s/\sI\s\s\s→\s\s\s5V\s/\s0,00875A\s≈\s570\sOhm
+R 960 896 912 896 0 0 40 5 0 0 0.5
+r 960 896 1040 896 0 570
+370 1072 896 1136 896 1 0 0
+g 1136 896 1136 928 0 0
+b 1056 864 1148 908 0
+w 1040 896 1072 896 0
+x 576 969 966 972 4 12 Diesen\sWert\shätten\swir\swie\sfolgt\sauch\sdirekt\sausrechnen\skönnen:
+x 575 992 1270 995 4 12 R_Gesamt\s\q\s1\s/\s((1\s/\sR1)\s\p\s(1\s/\sR2)\s\p\s...)\s\s\s\s→\s\s\s\s1\s/\s((1\s/\s1000\sOhm)\s\p\s(1\s/\s2000\sOhm)\s\p\s(1\s/\s4000\sOhm))\s≈\s570\sOhm
+x 574 760 894 763 4 12 Als\sFormel\sausgedrückt:\sI_Gesamt\s\q\sI1\s\p\sI2\s\p\sI3\s\p\s...
+b 785 661 848 706 0

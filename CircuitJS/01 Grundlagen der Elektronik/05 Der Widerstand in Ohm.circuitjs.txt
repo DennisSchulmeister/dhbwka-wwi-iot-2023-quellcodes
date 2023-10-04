@@ -1,0 +1,45 @@
+$ 3 0.0000049999999999999996 10.20027730826997 44 5 50 5e-11
+x -323 -152 -41 -149 4 24 Der\sWiderstand\sin\sOhm
+x -321 -123 470 -120 4 12 Eben\shaben\swir\sgesehen,\sdass\sSpannung\sund\sStromstärke\sdie\sLeistung\sund\sdamit\sdie\sumgesetzte\sEnergie\sje\sZeiteinheit\sdefinieren.
+x -321 -104 466 -101 4 12 Die\sSpannung\sergibt\ssich\soft\saus\sder\sverwendeten\sStromquelle,\szum\sBeispiel:\s1,5V\sBatterie,\s12V\sAuto-Batterie,\s240V\sSteckdose,\s...
+x -321 -84 517 -81 4 12 Die\sStromstärke\skann\sin\sder\sRegel\sjedoch\snicht\seinfach\sfrei\svariiert\swerden,\ssondern\shängt\sdavon\sab,\s"wie\sviel\sStrom\seine\sSchaltung\szieht".
+x -321 -65 512 -62 4 12 Zwei\sSchaltungen\s(z.B.\sfür\szwei\sunterschiedliche\sGeräte)\skönnen\sdieselbe\sStromquelle\sdaher\smit\sunterschiedlichen\sStromstärken\sbelasten
+x -322 -46 494 -43 4 12 und\ssomit\sin\sderselben\sZeit\sunterschiedlich\sviel\sEnergie\saus\sdieser\sZiehen.\sIm\seinen\sFall\shällt\sdie\sBatterie\slange,\sim\sanderen\snur\skurz\s…
+x -321 -6 462 -3 4 12 Wie\sviel\sStrom\sfließen\skann\s(wie\sviele\sElektronen\sfließen\skönnen)\shängt\sneben\sder\sSpannung\svom\s"Widerstand"\sder\sSchaltung\sab,
+x -320 13 426 16 4 12 also\swie\sviel\sWiderstand\sdie\sSchaltung\sleistet,\sum\sdem\sStromfluss\sentgegenzuwirken.\sEr\swird\sin\sder\sEinheit\sOhm\sgemessen.
+x -322 62 -151 65 4 16 Das\sOhmsche\sGesetz
+x -322 87 272 90 4 12 Anhand\svon\sSpannung\sund\sWiderstand\slässt\ssich\sdie\sStromstärke\smit\sfolgender\sFormel\sberechnen:
+x -322 106 58 109 4 12 Stromstärke\sI\s\q\sSpannung\sU\s/\sWiderstand\sR\s\s\s→\s\s\sKurz:\sI\s\q\sU\s/\sR
+x -321 141 549 144 4 12 Es\sgelten\sauch\salle\sUmformungen\sdieser\sFormel.\sKennt\sman\sbeispielsweise\sdie\sSpannung\sund\sdie\sStromstärke,\sdie\sdurch\seine\sSchaltung\sfließen,
+x -321 159 455 162 4 12 lässt\ssich\sdamit\sihr\sWiderstand\sberechnen:\sR\s\q\sU\s/\sI.\sAnhand\svon\sStromstärke\sund\sWiderstand\sfinden\swir\sdie\sSpannung:\sU\s\q\sR\s*\sI
+x -322 178 231 181 4 12 Diese\sZusammenhänge\swerden\sbei\sAnalyse\sund\sEntwurf\svon\sSchaltungen\ssehr\soft\sbenötigt.
+r -192 328 -104 328 0 500
+g 56 328 56 376 0 0
+x -247 271 -197 274 4 10 Spannung
+x -248 284 -208 287 4 10 bekannt
+x -163 285 -123 288 4 10 bekannt
+x -162 272 -106 275 4 10 Widerstand
+370 -104 328 56 328 1 0 0
+b -48 296 10 344 0
+x -47 272 11 275 4 10 Gemessene
+x -47 284 13 287 4 10 Stromstärke
+172 -192 328 -248 328 0 7 5 10 0 0 0.5 Voltage
+x -259 392 -52 395 4 10 Schieberegler\sam\srechten\sBildschirmrand
+x -260 406 -62 409 4 10 betätigen,\sum\sdie\sSpannung\szu\sändern.
+i 232 328 296 328 0 0.01
+r 344 328 344 408 0 500
+p 464 328 464 408 3 0 0
+w 296 328 344 328 0
+w 344 408 232 408 0
+w 232 408 232 328 0
+w 344 328 464 328 0
+w 344 408 464 408 0
+x 448 285 498 288 4 10 Spannung
+x 448 273 506 276 4 10 Gemessene
+x 333 273 389 276 4 10 Widerstand
+x 332 286 372 289 4 10 bekannt
+x 247 285 287 288 4 10 bekannt
+x 248 272 308 275 4 10 Stromstärke
+b 424 304 522 429 0
+x 228 464 512 467 4 10 Doppelklick\sauf\sden\sKreis\soder\sdas\ssenkrechte\sKästchen,
+x 228 477 490 480 4 10 um\sdie\sStromstärke\soder\sden\sWiderstand\szu\sändern.

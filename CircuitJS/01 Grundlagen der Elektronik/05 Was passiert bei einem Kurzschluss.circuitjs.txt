@@ -1,0 +1,29 @@
+$ 1 0.000005 10.20027730826997 50 5 50 5e-11
+v 608 528 608 432 0 0 40 9 0 0 0.5
+r 656 432 736 432 0 4
+w 608 528 736 528 0
+b 576 400 724 560 0
+x 575 376 829 379 4 10 Ersatzschaltbild\sfür\seine\stypische\s9V-Blockbatterie.
+x 575 391 905 394 4 10 Der\sInnenwiderstand\seiner\sgeladenen\sBatterie\sbeträgt\sca.\s4\sOhm.
+w 608 432 656 432 2
+w 736 432 944 432 0
+370 944 432 944 528 1 0 0
+w 944 528 736 528 0
+b 912 400 1002 560 0
+x 1016 407 1308 410 4 10 Kurzfristig\sgemessene\sStromstärke\sbei\seinem\sKurzschluss.
+x 1015 424 1333 427 4 10 Die\sBatterie\sentläd\sin\skürzester\sZeit\sund\serwärmt\ssich\saufgrund
+x 1014 441 1326 444 4 10 der\schemischen\sReaktion\sim\sInneren.\sEs\sbesteht\sBrandgefahr!
+x 1013 475 1397 478 4 10 Bei\seinem\sWackelkontakt\skönnen\saufgrund\sder\sStromstärke\sFunken\ssprühen.
+x 1013 490 1219 493 4 10 Diese\serhöhen\sdas\sFeuerrisiko\szusätzlich.
+x 574 162 1013 165 4 24 Was\spassiert\sbei\seinem\sKurzschluss?
+x 575 188 1367 191 4 12 Bei\seinem\sKurzschluss\sder\sStromversorgung\sgibt\ses\snur\seinen\ssehr\sgeringen\sWiderstand\szwischen\sder\sSpannungsquelle\sund\sMasse,
+x 575 204 1372 207 4 12 wodurch\sein\ssehr\shoher\sStrom\sfließt.\sDieser\swird\spraktisch\snur\sdurch\sden\sInnenwiderstand\sder\sStromquelle\sbegrenzt.\sNormalerweise
+x 575 221 1396 224 4 12 ist\sder\sInnenwiderstand\sklein\sgenug,\sum\sbei\sden\smeisten\sBerechnungen\svernachlässigt\swerden\szu\skönnen.\sHier\ssorgt\ser\saufgrund\sseiner
+x 575 238 1255 241 4 12 geringen\sGröße\sjedoch\sfür\seine\ssehr\sgroße\sStromstärke,\swas\sdie\sStromquelle\süberlasten\sund\sggf.\szerstören\skann.
+x 574 268 1357 271 4 12 Durch\sextreme\sHitzeentwicklung\sbesteht\sdarüber\shinaus\sin\svielen\sFällen\sakute\sBrandgefahr!\sEin\sArduino\swird\sbei\seinem\seinfachen
+x 574 286 1379 289 4 12 Kurzschluss\ssicher\skein\sFeuer\sfangen.\sAkkus\sund\sBatterien\sallerdings\sschon,\sda\ssie\ssich\saufgrund\sder\schemischen\sReaktionen\sin\sihrem
+x 575 302 1413 305 4 12 Inneren\sextrem\serhitzen.\sBeim\sArduino\swerden\shingegen\seher\sdie\sinneren\sVerbindungen\sinnerhalb\sdes\sMicrocontroller-Chips\sdurchbrennen.
+x 575 687 654 690 4 16 Randnotiz
+x 575 707 1202 710 4 12 Eine\svolle\sBatterie\shat\seinen\skleinen\sInnenwiderstand,\seine\sleere\sBatterie\seinen\shohen\sInnenwiderstand.
+x 575 725 1226 728 4 12 Es\sist\shauptsächlich\sder\sInnenwiderstand,\sder\sdie\smaximale\sStromstärke\sbegrenzt,\sdurch\sden\ssich\seine\svolle
+x 575 742 867 745 4 12 Batterie\svon\seiner\sleeren\sBatterie\sunterscheidet.

@@ -1,0 +1,54 @@
+$ 3 0.0000049999999999999996 10.20027730826997 33 5 50 5e-11
+x -321 -157 -44 -154 4 24 Stromstärke\sin\sAmpere
+x -321 -123 543 -120 4 12 Wir\serinnern\suns:\sDie\sSpannung\sin\sVolt\sist\sdefiniert\sals\s"1\sVolt\s\q\s1\sJoule\s/\s1\sCoulumb"\sund\sdrückt\saus,\swie\sviel\sEnergie\sein\sElektron\stransportiert.
+x -321 -105 582 -102 4 12 Was\sfehlt\sist\sallerdings\sder\sBezug\szur\sZeit:\sIn\swelcher\sZeit\swird\sdiese\sEnergie\stransportiert\sbzw.\swie\sviel\sEnergie\sfließt\sin\seiner\sgegebenen\sZeitspanne?
+x -322 -89 478 -86 4 12 Zur\sBeantwortung\sdieser\sFragen\smüssen\swir\sneben\sder\sSpannung\snoch\sdie\sStromstärke\sin\sAmpere\skennen,\sdie\swie\sfolgt\sdefiniert\sist:
+x -321 -59 -106 -56 4 12 1\sAmpere\s\q\s1\sCoulumb\s/\s1\sSekunde
+x -322 -43 79 -40 4 12 Diese\sFormel\skönnen\swir\slesen\sals\s"Anzahl\sElektronen\sje\sSekunde".
+x -321 -14 573 -11 4 12 Zur\sUntersuchung\seines\sStromkreises\sbenötigen\swir\ssomit\sbeide\sAngaben:\sSpannung\s(Energie\sje\sElektron)\sund\sStromstärke\s(Elektronen\sje\sSekunde).
+x -321 33 -233 36 4 16 Fallbeispiel
+x -321 54 364 57 4 12 Wie\swir\swissen\sist\s1\sJoule\sdie\sEnergie,\sdie\sbenötigt\swird,\sum\seine\sTafel\sSchokolade\s(100g)\seinen\sMeter\sanzuheben.
+x -322 73 352 76 4 12 Wollen\swir\szwei\sTafeln\sSchokolade\sdie\sTreppe\shochtragen,\sbenötigen\swir\s10\sJoule\sEnergie\s(200g\smal\sfünf\sMeter).
+x -321 91 329 94 4 12 (1)\sBei\s1V\sSpannung\sund\s1A\sStromstärke\sdauert\sdies\s10\sSekunden,\sda\s1\sCoulomb\s(6,2\sTrillionen\sElektronen)
+x -325 110 338 113 4 12 \sje\sSekunde\sfließt,\swas\sjeweils\s1\sJoule\san\sEnergie\sliefert.\s(2)\sBei\s2V\sSpannung\sbenötigen\swir\snur\sdie\shalbe\sZeit.
+x -319 127 337 130 4 12 Zwar\sfließen\simmer\snoch\sgleich\sviele\sElektronen.\sDie\sElektronen\stragen\saber\sdie\sdoppelte\sMenge\san\sEnergie.
+x -321 145 334 148 4 12 (3)\sAlternativ\shätten\swir\sauch\sdie\sStromstärke\sverdoppeln\skönnen,\sum\sdie\sAnzahl\sder\sElektronen\szu\serhöhen.
+x -322 206 -128 209 4 24 Leistung\sin\sWatt
+x -320 236 498 239 4 12 Unterschiedliche\sKombinationen\svon\sSpannung\sund\sStromstärke\skönnen\soffensichtlich\sdieselbe\sMenge\sEnergie\sin\sderselben\sZeit\sliefern.
+x -321 254 509 257 4 12 Um\sdeshalb\sunabhänging\sdavon\szu\szeigen,\swie\sviel\sEnergie\sein\sStromkreis\sinnerhalb\seiner\sgegebenen\sZeitspanne\sverbraucht\s(den\sBegriff
+x -321 272 495 275 4 12 "Strom\sverbrauchen"\sklären\swir\snoch\sspäter,\sgemeint\sist\shier,\swie\sviel\sEnergie\sin\sArbeit\sumgesetzt\swird),\sgibt\ses\snoch\sdie\ssog.\sLeistung,
+x -321 289 54 292 4 12 welche\sin\sder\sEinheit\sWatt\sgemessen\swird.\sSie\sist\sdefiniert\sals:
+x -321 322 -149 325 4 12 1\sWatt\s\q\s1\sJoule\s/\s1\sSekunde
+x -322 340 16 343 4 12 Diese\sFormel\skönnen\swir\slesen\sals\s"Energie\sje\sSekunde".
+x -322 372 400 375 4 12 Die\sEinheit\sWatt\sfinden\swir\szum\sBeispiel\sauf\sder\sStromrechnung\swieder,\sdie\sin\sKilowattstunden\s(kWh)\sabgerechnet\swird:
+x -321 389 -21 392 4 12 1000\sWatt\s*\s1\sStunde\s\q\s3,6\sMegajoule\san\sEnergie
+x -322 426 -121 429 4 16 Berechnung\sder\sLeistung
+x -323 445 373 448 4 12 Aufgrund\sder\sobigen\sFormeln\skann\sdie\sLeistung\seines\sStromkreises\sin\sWatt\smit\sfolgender\sFormel\sberechnet\swerden:
+x -322 462 341 465 4 12 Leistung\s\q\sSpannung\s*\sStromstärke\s\s→\s\s1\sJoule\s/\s1\sSekunde\s\q\s(1\sJoule\s/\s1\sCoulumb)\s*\s(1\sCoulumb\s/\s1\sSekunde)
+v 688 40 688 -16 0 0 40 1 0 0 0.5
+w 688 -16 752 -16 3
+r 816 -16 912 -16 0 1
+w 688 40 752 40 0
+420 752 -16 816 -16 0 56
+w 912 -16 912 40 0
+w 912 40 816 40 0
+w 912 168 816 168 0
+w 912 112 912 168 0
+420 752 112 816 112 0 56
+w 688 168 752 168 0
+r 816 112 912 112 0 2
+w 688 112 752 112 3
+v 688 168 688 112 0 0 40 2 0 0 0.5
+x 625 21 659 24 4 24 (1)
+x 624 147 658 150 4 24 (2)
+x 625 285 659 288 4 24 (3)
+w 912 304 816 304 0
+w 912 248 912 304 0
+420 752 248 816 248 0 56
+w 688 304 752 304 0
+r 816 248 912 248 0 0.5
+w 688 248 752 248 3
+v 688 304 688 248 0 0 40 1 0 0 0.5
+x 686 60 770 63 4 12 Ausgangslage
+x 687 191 980 194 4 12 Doppelte\sLeistung\saufgrund\sdoppelter\sSpannung
+x 686 328 992 331 4 12 Doppelte\sLeistung\saufgrund\sdoppelter\sStromstärke
