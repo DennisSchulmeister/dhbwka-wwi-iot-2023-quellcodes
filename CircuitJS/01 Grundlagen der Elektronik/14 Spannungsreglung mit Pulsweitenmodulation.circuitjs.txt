@@ -1,0 +1,23 @@
+$ 3 0.0000049999999999999996 11.086722712598126 46 5 50 5e-11
+x 29 -26 573 -23 4 24 Spannungsreglung\smit\sPulsweitenmodulation
+x 31 8 860 11 4 12 Viele\sMicrocontroller,\swie\sder\sAtmega328\sdes\sArduino\sUno\s(Rev\s1),\skönnen\skeine\sanalogen\sSignale\serzeugen.\sAn\sihren\sAusgängen\skönnen
+x 31 26 841 29 4 12 deshalb\snur\szwei\sSpannungen\sangelegt\swerden:\s0V\sfür\sLOW\ssowie\sbspw.\s5V\sfür\sHIGH.\sZur\sRegulierung\svieler\sVerbraucher\swerden\saber
+x 31 45 857 48 4 12 auch\sdazwische\sliegenden\sSpannungn\sbenötigt,\sum\sz.B.\sdie\sIntensität\seiner\sLED\soder\sdie\sWinkelgeschwindigkeit\seines\sMotors\szu\ssteuern.
+b 248 192 344 256 0
+x 248 187 361 190 4 10 Arduino\sPWM-Ausgang
+x 248 279 359 282 4 10 Doppelklicken,\sum\sdie
+x 247 292 352 295 4 10 Parameter\szu\sändern
+x 31 62 844 65 4 12 Reagiert\sein\sVerbraucher\seher\sträge\sauf\sSpannungsänderungen\s(bei\seiner\sLED\sreagiert\sstattdessen\sdas\smenschliche\sAuge\sträge),\skann
+r 384 232 432 232 0 100
+w 320 232 384 232 0
+x 32 78 375 81 4 12 mit\sPulsweitenmodulation\sderselbe\sEffekt\serzielt\swerden.
+x 31 109 848 112 4 12 Die\sGrundidee\sist,\sden\sAusgang\sin\sschneller\sAbfolge\simmer\swieder\sein-\sund\sauszuschalten\sund\ssomit\sdie\sEffektivspannung\sim\szeitlichen
+x 31 127 842 130 4 12 Mittel\szu\sreduzieren.\sAls\sParameter\sstehen\sdabei\sdie\sFrequenz\s(Anzahl\sder\sSchaltvorgänge\sje\sSekunde)\ssowie\sder\sTastgrad\s(engl.\s"Duty
+x 31 145 388 148 4 12 Cycle",\swie\slange\san\swährend\seiner\sPeriode)\szur\sVerfügung.
+R 320 232 280 232 0 2 50 5 0 0 0.75
+g 488 232 488 264 0 0
+403 528 192 720 296 0 10_64_0_135686_5_0.000390625_-1_1
+x 32 342 124 345 4 16 Anmerkung
+x 31 363 709 366 4 12 Beim\sArduino\sist\sdie\sFrequenz\sfest\sauf\sca.\s500\sHz\seingestellt.\sDer\sTastgrad\skann\sin\s256\sSchritten\svariiert\swerden.
+x 30 382 798 385 4 12 Natürlich\skann\sdas\sPWM-Signal\sbspw.\smit\seinem\sTransistor\skombiniert\swerden,\sum\seinen\sgrößeren\sSpannungsbereich\szu\sregeln.
+162 432 232 488 232 2 default-led 1 0 0 0.01
