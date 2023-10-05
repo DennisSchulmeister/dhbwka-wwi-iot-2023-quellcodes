@@ -16,10 +16,10 @@ x 304 235 418 238 4 10 Arduino\sDigitaleingang
 x 448 236 482 239 4 10 Sensor
 x 585 289 699 292 4 10 Schalter\sanklicken,\sum
 x 584 302 699 305 4 10 den\sSensor\sauszulösen
-x 32 511 797 514 4 12 In\sdiesem\sFall\swird\sein\s"Pull-Up-Widerstand"\sbenötigt,\sder\sden\sEingang\sdes\sMicrocontrollers\sauf\sHIGH\szieht,\sso\slange\sder\sSensor
-x 31 492 780 495 4 12 Schaltet\sder\sSensor\sanstatt\sder\sLogikspannung\sauf\sMasse/Ground,\swenn\sdas\sEreignis\seintritt,\sliegt\seine\sActive\sLow\sLogik\svor.
-x 31 473 164 476 4 16 Active\sLow\sLogik
-x 32 528 780 531 4 12 nicht\sauslöst.\sStellt\sder\sSensor\sden\sKontakt\sher,\sfließt\sder\sStrom\shingegen\süber\sden\sSensor\snach\sMasse/Ground\sab,\swodurch
+x 32 527 797 530 4 12 In\sdiesem\sFall\swird\sein\s"Pull-Up-Widerstand"\sbenötigt,\sder\sden\sEingang\sdes\sMicrocontrollers\sauf\sHIGH\szieht,\sso\slange\sder\sSensor
+x 31 508 780 511 4 12 Schaltet\sder\sSensor\sanstatt\sder\sLogikspannung\sauf\sMasse/Ground,\swenn\sdas\sEreignis\seintritt,\sliegt\seine\sActive\sLow\sLogik\svor.
+x 31 489 164 492 4 16 Active\sLow\sLogik
+x 32 544 780 547 4 12 nicht\sauslöst.\sStellt\sder\sSensor\sden\sKontakt\sher,\sfließt\sder\sStrom\shingegen\süber\sden\sSensor\snach\sMasse/Ground\sab,\swodurch
 x 32 147 774 150 4 12 an\sden\sLogikpegel\sdes\sMicrocontrollers\sangepasst\swerden\s(bspw.\smit\seinem\sSpannungsteiler,\sTransistor\soder\sLevel-Shifter).
 x 31 165 770 168 4 12 In\sjedem\sFall\swird\sein\ssog.\s"Pull-Down-Widerstand"\sbenötigt,\sder\sden\sGPIO-Eingang\sdauerhaft\sauf\sMasse\szieht,\sso\slange\sder
 x 31 182 588 185 4 12 Sensor\snicht\sfeuert,\sum\sFehlerkennungen\saufgrund\sparasitärer\sEinstreuungen\szu\svermeiden.
@@ -33,30 +33,31 @@ x 499 323 652 326 4 8 Pull-Down-Widerstand\szur\sVermeidung
 x 499 334 647 337 4 8 von\sFehlerkennungen.\sJeder\sWert\sum
 x 499 345 655 348 4 8 ca.\s20k\s-\s50k\sOhm\ssollte\sfunktionieren.
 423 492 331 457 320 0
-x 30 410 747 413 4 12 Falls\sder\sSensor\skeinen\seingebauten\sWiderstand\sbesitzt\soder\seine\szu\shohe\sStromstärke\sdurchlässt,\smuss\szwischen\sdem
-x 30 429 608 432 4 12 Microcontroller\sund\sdem\sSensor\sein\sBegrenzungswiderstand\s(Vorwiderstand)\seingebaut\swerden.
-x 30 548 233 551 4 12 der\sMicrocontroller\sein\sLOW\ssieht.
-x 467 611 623 614 4 8 ca.\s20k\s-\s50k\sOhm\ssollte\sfunktionieren.
-x 467 600 615 603 4 8 von\sFehlerkennungen.\sJeder\sWert\sum
-x 467 589 609 592 4 8 Pull-Up-Widerstand\szur\sVermeidung
-r 400 600 400 680 0 20000
-g 568 680 568 688 0 0
-w 400 680 480 680 0
-s 480 680 536 680 0 1 false
-R 400 600 400 576 0 0 40 5 0 0 0.5
-M 312 680 296 680 0 2.5
-x 551 663 666 666 4 10 den\sSensor\sauszulösen
-x 552 650 666 653 4 10 Schalter\sanklicken,\sum
-x 456 645 490 648 4 10 Sensor
-x 272 643 386 646 4 10 Arduino\sDigitaleingang
-b 456 648 544 704 0
-b 272 648 360 704 0
-w 336 680 400 680 0
-w 536 680 568 680 0
-w 312 680 336 680 2
-423 456 600 417 619 0
-x 32 806 813 809 4 12 automatisch\sauf\sActive\sLow\sLogik\sumstellt\sund\sdie\sgelesenen\sWerte\sinvertiert\s(aus\sHIGH\swird\sLOW\sund\sumgekehrt).\sDer\sRaspi\shat
-x 31 751 227 754 4 16 Eingebaute\sWiderstände
-x 31 770 790 773 4 12 Viele\sMicrocontroller\sbesitzen\seingebaute\sPull-Up-\sund/oder\sPull-Down-Widerstände,\sdie\sper\sSoftware\saktiviert\swerden\skönnen.
-x 32 789 804 792 4 12 Der\sArduino\sUno\s(Atmega-Microcontroller)\shat\seinen\seingebauten\sPull-Up-Widerstand,\sbei\sdessen\sAktivierung\sder\sMicrocontroller
-x 31 823 541 826 4 12 beides,\sdie\sgelesenen\sWerte\smüssen\sin\sder\sSoftware\sjedoch\sselbst\sinvertiert\swerden.
+x 30 410 790 413 4 12 Anmerkung:\sDer\seingezeichnete\sWiderstand\svon\s480\sOhm\swird\seigentlich\snicht\sbenötigt,\sda\sdie\sEingänge\sdes\sMicrocontrollers
+x 30 429 810 432 4 12 ohnehin\shochohmig\ssind\sund\sdie\sStromstärke\sausreichend\sbegrenzen.\sEr\sdient\snur\sder\sSicherheit,\sfalls\sder\sGPIO-Pin\sversehentlich
+x 30 564 233 567 4 12 der\sMicrocontroller\sein\sLOW\ssieht.
+x 467 627 623 630 4 8 ca.\s20k\s-\s50k\sOhm\ssollte\sfunktionieren.
+x 467 616 615 619 4 8 von\sFehlerkennungen.\sJeder\sWert\sum
+x 467 605 609 608 4 8 Pull-Up-Widerstand\szur\sVermeidung
+r 400 616 400 696 0 20000
+g 568 696 568 704 0 0
+w 400 696 480 696 0
+s 480 696 536 696 0 1 false
+R 400 616 400 592 0 0 40 5 0 0 0.5
+M 312 696 296 696 0 2.5
+x 551 679 666 682 4 10 den\sSensor\sauszulösen
+x 552 666 666 669 4 10 Schalter\sanklicken,\sum
+x 456 661 490 664 4 10 Sensor
+x 272 659 386 662 4 10 Arduino\sDigitaleingang
+b 456 664 544 720 0
+b 272 664 360 720 0
+w 336 696 400 696 0
+w 536 696 568 696 0
+w 312 696 336 696 2
+423 456 616 417 635 0
+x 32 822 813 825 4 12 automatisch\sauf\sActive\sLow\sLogik\sumstellt\sund\sdie\sgelesenen\sWerte\sinvertiert\s(aus\sHIGH\swird\sLOW\sund\sumgekehrt).\sDer\sRaspi\shat
+x 31 767 227 770 4 16 Eingebaute\sWiderstände
+x 31 786 790 789 4 12 Viele\sMicrocontroller\sbesitzen\seingebaute\sPull-Up-\sund/oder\sPull-Down-Widerstände,\sdie\sper\sSoftware\saktiviert\swerden\skönnen.
+x 32 805 804 808 4 12 Der\sArduino\sUno\s(Atmega-Microcontroller)\shat\seinen\seingebauten\sPull-Up-Widerstand,\sbei\sdessen\sAktivierung\sder\sMicrocontroller
+x 31 839 541 842 4 12 beides,\sdie\sgelesenen\sWerte\smüssen\sin\sder\sSoftware\sjedoch\sselbst\sinvertiert\swerden.
+x 30 447 783 450 4 12 als\sAusgang\skonfiguriert\swurde.\sBei\seinem\sLOW-Pegel\sam\sAusgang\swürde\sohne\sden\sWiderstand\sein\ssehr\shoher\sStrom\sfließen.
