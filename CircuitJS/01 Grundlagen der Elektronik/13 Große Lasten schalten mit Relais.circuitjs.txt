@@ -26,9 +26,9 @@ w 560 360 560 392 0
 R 472 176 472 152 0 1 50 240 0 0 0.5
 w 472 176 472 208 3
 w 472 208 472 328 0
-181 624 280 680 280 0 1884.3137523320847 100 240 0.025 0.025
+181 624 280 680 280 0 1893.2006578095645 100 240 0.025 0.025
 w 560 312 584 312 0
-181 728 344 784 344 0 315.25630548521394 100 240 0.025 0.025
+181 728 344 784 344 0 300.0000713803284 100 240 0.025 0.025
 w 560 344 728 344 0
 g 784 344 784 360 0 0
 g 680 280 680 296 0 0
@@ -41,3 +41,4 @@ x 408 107 496 110 4 10 Arbeitsstromkreis
 x 31 498 774 501 4 12 Das\shier\seingezeichnete\sRelais\sschaltet\serst\sab\seinem\sSteuerstrom\svon\s20mA.\sUm\sden\sMicrocontroller\snicht\szu\süberlassten,
 x 30 514 547 517 4 12 wird\sder\sSteuerstrom\sdaher\smit\seinem\sTransistor\sverstärkt\s(siehe\svorheriges\sBeispiel).
 x 413 406 627 409 4 8 Diese\sVerbindung\sgehört\snoch\szum\sSteuerstromkreis.
+x 459 130 614 133 4 8 240V\sWechselstrom\saus\sder\sStockdose

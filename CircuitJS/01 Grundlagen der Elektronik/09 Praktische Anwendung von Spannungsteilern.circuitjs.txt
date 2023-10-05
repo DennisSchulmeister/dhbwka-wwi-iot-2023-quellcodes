@@ -18,80 +18,80 @@ x 851 359 1227 362 4 10 Anmerkung:\sDa\swir\shier\snicht\sden\sSpannungsabfall\s
 x 851 372 1220 375 4 10 wie\sdie\sGesamtspannung\sin\smehrere\sTeilspannungen\szerlegt\swird,\sdrehen
 x 851 385 1173 388 4 10 wir\shier\sdie\sVoltmeter\sund\sdamit\sdas\sangezeigte\sVorzeichen\sum.
 x 576 418 1680 421 4 12 Wie\swir\sgesehen\shaben,\smüssen\smehrere\sVerbraucher\sdaher\simmer\s"parallel"\sund\snicht\s"in\sReihe"\sgeschaltet\swerden.\sDoch\sauch\seine\sReihenschaltung\skann\sgelegentlich\snützlich\ssein.
-x 574 478 851 481 4 16 Inkompatible\sLogikpegel\sanpassen
-x 575 500 1601 503 4 12 Die\smeisten\sArduino-Boards\sarbeiten\smit\sdem\shistorischen\sLogikpegel\svon\s5V,\ssignalisieren\seine\slogische\sEins\sdaher\smit\seiner\sSpannung\svon\sca.\s5V\sund\seine\slogische\sNull
-x 576 518 1582 521 4 12 mit\sca.\s0V\s(also\seiner\sVerbindung\sgegen\sMasse).\sBei\sden\s0V\ssind\ssich\salle\sDigitalbausteine\seinig.\sBei\sden\s5V\sallerdings\snicht.\sModerne\sBauteile\sarbeiten,\sum\sStrom\sund
-x 574 536 1582 539 4 12 Abwärem\szu\ssparen,\stypischerweise\smit\s3,3V\soder\sweniger\s(2,4V\sund\s1,8V\ssind\sebenfalls\shäufig\sanzutreffen).\sWas\salso\stun,\swenn\sein\s5V\sGPIO-Ausgang\sdes\sArduino\smit
-x 575 554 1515 557 4 12 einem\s3,3V\sDigitaleingang\seines\sanderen\sBausteins\sverbunden\swerden\ssoll?\sEine\sMöglichkeit\swäre,\smit\szwei\sWiderständen\seinen\sSpannungsteiler\szu\sbauen:
-L 944 624 912 624 0 1 false 5 0
-w 944 624 976 624 2
-r 976 624 1040 624 0 560
-r 1040 624 1104 624 0 1000
-g 1104 624 1104 640 0 0
-368 1040 624 1040 720 1 0 Eingang
-b 900 597 980 645 0
-b 1007 698 1078 742 0
-x 747 617 877 620 4 10 Arduino:\sZum\sUmschalten
-x 745 633 891 636 4 10 des\sAusgangs\sauf\sL/H\sklicken
-x 1083 706 1263 709 4 10 Digitaleingang\seines\s3,3V-Bausteins
-x 1161 624 1462 627 4 10 Hinweis:\sUm\saus\sdem\sArduino\snicht\szu\sviel\sStrom\szu\sziehen,
-x 1161 638 1470 641 4 10 bieten\ssich\sWiderstände\sum\sdie\s1\skOhm,\swie\shier\sgezeigt,\san.
-x 574 788 851 791 4 16 Spannungsabfall\sbei\seiner\sBatterie
-x 574 810 1619 813 4 12 Sollen\smehrere\sGeräte\smit\sderselben\sBatterie\sbetrieben\swerden,\smüssen\swir\sdiese\sparallel\sschalten,\swie\swir\sgelernt\shaben.\sAngeblich\ssteht\sdann\sjedem\sVerbraucher\sdieselbe
-x 575 828 1225 831 4 12 Spannung\szur\sVerfügung.\sIn\sder\sPraxis\sverringert\ssich\sjedoch\sdie\sSpannung\smit\sjedem\sVerbraucher.\sWarum?
-v 816 944 816 880 0 0 40 9 0 0 0.5
-w 816 880 848 880 2
-r 848 880 912 880 0 4
-w 816 944 912 944 0
-b 784 848 912 975 0
-x 781 988 974 991 4 10 Ersatzschaltbild\seiner\s9V-Blockbatterie
-r 992 880 992 944 0 250
-w 992 880 1072 880 0
-w 992 944 1072 944 0
-r 1072 880 1072 944 0 250
-w 1232 880 1312 880 0
-w 1232 944 1312 944 0
-r 1312 880 1312 944 0 250
-w 1312 880 1392 880 0
-w 1312 944 1392 944 0
-p 1392 880 1392 944 3 0 0
-r 1152 880 1152 944 0 250
-w 1072 944 1152 944 0
-w 1072 880 1152 880 0
-r 1232 880 1232 944 0 250
-w 1152 944 1232 944 0
-w 1152 880 1232 880 0
-b 1344 848 1466 976 0
-x 1342 989 1524 992 4 10 Uns\ssind\s0,7V\sverlorgen\sgegangen?!
-w 912 880 992 880 0
-w 912 944 992 944 0
-x 575 1022 1196 1025 4 12 Rechnen\swir\sden\sGesamtwiderstand\sder\sfünf\sVerbraucher\saus,\sist\sleichter\sersichtlich,\swas\shier\spassiert:
-w 912 1152 944 1152 0
-r 992 1088 1072 1088 0 50
-x 781 1196 1007 1199 4 10 Ersatzschaltbild\seiner\svollen\s9V-Blockbatterie
-b 784 1056 912 1183 0
-w 816 1152 912 1152 0
-r 848 1088 912 1088 0 4
-w 816 1088 848 1088 2
-v 816 1152 816 1088 0 0 40 9 0 0 0.5
-w 1072 1088 1072 1152 0
-w 912 1088 944 1088 0
-p 944 1088 944 1152 3 0 0
-w 944 1088 992 1088 0
-w 1072 1152 944 1152 0
-x 573 1038 1569 1041 4 12 Die\sVerbraucher\sbilden\smit\sdem\sInnenwiderstand\sder\sBatterie\seinen\sSpannungsteiler,\swodurch\ssich\sdie\sverfügbare\sSpannung\san\sden\sKlemmen\sder\sBatterie\sreduziert.
-x 576 1221 1654 1224 4 12 Anhand\sdes\sInnenwiderstands\sder\sBatterie\slässt\ssich\sauch\serklären,\swarum\seine\sleere\sBatterie\sweniger\sSpannung\sliefert.\sDurch\sden\serhöhten\sInnenwiederstand\sder\sleeren\sBatterie
-x 575 1239 1647 1242 4 12 und\sden\sfesten\sWiderstand\sder\sangeschlossenen\sVerbraucher\sfällt\seine\shöhere\sSpannung\sbereits\sinnerhalb\sder\sBatterie\sab\sund\ssteht\sden\sVerbrauchern\ssomit\snicht\szur\sVerfügung.
-w 1072 1360 944 1360 0
-w 944 1296 992 1296 0
-p 944 1296 944 1360 3 0 0
-w 912 1296 944 1296 0
-w 1072 1296 1072 1360 0
-v 816 1360 816 1296 0 0 40 9 0 0 0.5
-w 816 1296 848 1296 2
-r 848 1296 912 1296 0 50
-w 816 1360 912 1360 0
-b 784 1264 912 1391 0
-x 781 1404 1008 1407 4 10 Ersatzschaltbild\seiner\sleeren\s9V-Blockbatterie
-r 992 1296 1072 1296 0 50
-w 912 1360 944 1360 0
+x 574 462 851 465 4 16 Inkompatible\sLogikpegel\sanpassen
+x 575 484 1601 487 4 12 Die\smeisten\sArduino-Boards\sarbeiten\smit\sdem\shistorischen\sLogikpegel\svon\s5V,\ssignalisieren\seine\slogische\sEins\sdaher\smit\seiner\sSpannung\svon\sca.\s5V\sund\seine\slogische\sNull
+x 576 502 1582 505 4 12 mit\sca.\s0V\s(also\seiner\sVerbindung\sgegen\sMasse).\sBei\sden\s0V\ssind\ssich\salle\sDigitalbausteine\seinig.\sBei\sden\s5V\sallerdings\snicht.\sModerne\sBauteile\sarbeiten,\sum\sStrom\sund
+x 574 520 1582 523 4 12 Abwärme\szu\ssparen,\stypischerweise\smit\s3,3V\soder\sweniger\s(2,4V\sund\s1,8V\ssind\sebenfalls\shäufig\sanzutreffen).\sWas\salso\stun,\swenn\sein\s5V\sGPIO-Ausgang\sdes\sArduino\smit
+x 575 538 1515 541 4 12 einem\s3,3V\sDigitaleingang\seines\sanderen\sBausteins\sverbunden\swerden\ssoll?\sEine\sMöglichkeit\swäre,\smit\szwei\sWiderständen\seinen\sSpannungsteiler\szu\sbauen:
+L 944 608 912 608 0 0 false 5 0
+w 944 608 976 608 2
+r 976 608 1040 608 0 560
+r 1040 608 1104 608 0 1000
+g 1104 608 1104 624 0 0
+368 1040 608 1040 704 1 0 Eingang
+b 900 581 980 629 0
+b 1007 682 1078 726 0
+x 747 601 877 604 4 10 Arduino:\sZum\sUmschalten
+x 745 617 891 620 4 10 des\sAusgangs\sauf\sL/H\sklicken
+x 1083 690 1263 693 4 10 Digitaleingang\seines\s3,3V-Bausteins
+x 1161 608 1462 611 4 10 Hinweis:\sUm\saus\sdem\sArduino\snicht\szu\sviel\sStrom\szu\sziehen,
+x 1161 622 1470 625 4 10 bieten\ssich\sWiderstände\sum\sdie\s1\skOhm,\swie\shier\sgezeigt,\san.
+x 574 772 851 775 4 16 Spannungsabfall\sbei\seiner\sBatterie
+x 574 794 1619 797 4 12 Sollen\smehrere\sGeräte\smit\sderselben\sBatterie\sbetrieben\swerden,\smüssen\swir\sdiese\sparallel\sschalten,\swie\swir\sgelernt\shaben.\sAngeblich\ssteht\sdann\sjedem\sVerbraucher\sdieselbe
+x 575 812 1225 815 4 12 Spannung\szur\sVerfügung.\sIn\sder\sPraxis\sverringert\ssich\sjedoch\sdie\sSpannung\smit\sjedem\sVerbraucher.\sWarum?
+v 816 928 816 864 0 0 40 9 0 0 0.5
+w 816 864 848 864 2
+r 848 864 912 864 0 4
+w 816 928 912 928 0
+b 784 832 912 959 0
+x 781 972 974 975 4 10 Ersatzschaltbild\seiner\s9V-Blockbatterie
+r 992 864 992 928 0 250
+w 992 864 1072 864 0
+w 992 928 1072 928 0
+r 1072 864 1072 928 0 250
+w 1232 864 1312 864 0
+w 1232 928 1312 928 0
+r 1312 864 1312 928 0 250
+w 1312 864 1392 864 0
+w 1312 928 1392 928 0
+p 1392 864 1392 928 3 0 0
+r 1152 864 1152 928 0 250
+w 1072 928 1152 928 0
+w 1072 864 1152 864 0
+r 1232 864 1232 928 0 250
+w 1152 928 1232 928 0
+w 1152 864 1232 864 0
+b 1360 832 1466 960 0
+x 1359 973 1541 976 4 10 Uns\ssind\s0,7V\sverlorgen\sgegangen?!
+w 912 864 992 864 0
+w 912 928 992 928 0
+x 575 1006 1196 1009 4 12 Rechnen\swir\sden\sGesamtwiderstand\sder\sfünf\sVerbraucher\saus,\sist\sleichter\sersichtlich,\swas\shier\spassiert:
+w 912 1136 944 1136 0
+r 992 1072 1072 1072 0 50
+x 781 1180 1007 1183 4 10 Ersatzschaltbild\seiner\svollen\s9V-Blockbatterie
+b 784 1040 912 1167 0
+w 816 1136 912 1136 0
+r 848 1072 912 1072 0 4
+w 816 1072 848 1072 2
+v 816 1136 816 1072 0 0 40 9 0 0 0.5
+w 1072 1072 1072 1136 0
+w 912 1072 944 1072 0
+p 944 1072 944 1136 3 0 0
+w 944 1072 992 1072 0
+w 1072 1136 944 1136 0
+x 573 1022 1569 1025 4 12 Die\sVerbraucher\sbilden\smit\sdem\sInnenwiderstand\sder\sBatterie\seinen\sSpannungsteiler,\swodurch\ssich\sdie\sverfügbare\sSpannung\san\sden\sKlemmen\sder\sBatterie\sreduziert.
+x 576 1205 1654 1208 4 12 Anhand\sdes\sInnenwiderstands\sder\sBatterie\slässt\ssich\sauch\serklären,\swarum\seine\sleere\sBatterie\sweniger\sSpannung\sliefert.\sDurch\sden\serhöhten\sInnenwiederstand\sder\sleeren\sBatterie
+x 575 1223 1647 1226 4 12 und\sden\sfesten\sWiderstand\sder\sangeschlossenen\sVerbraucher\sfällt\seine\shöhere\sSpannung\sbereits\sinnerhalb\sder\sBatterie\sab\sund\ssteht\sden\sVerbrauchern\ssomit\snicht\szur\sVerfügung.
+w 1072 1344 944 1344 0
+w 944 1280 992 1280 0
+p 944 1280 944 1344 3 0 0
+w 912 1280 944 1280 0
+w 1072 1280 1072 1344 0
+v 816 1344 816 1280 0 0 40 9 0 0 0.5
+w 816 1280 848 1280 2
+r 848 1280 912 1280 0 50
+w 816 1344 912 1344 0
+b 784 1248 912 1375 0
+x 781 1388 1008 1391 4 10 Ersatzschaltbild\seiner\sleeren\s9V-Blockbatterie
+r 992 1280 1072 1280 0 50
+w 912 1344 944 1344 0
