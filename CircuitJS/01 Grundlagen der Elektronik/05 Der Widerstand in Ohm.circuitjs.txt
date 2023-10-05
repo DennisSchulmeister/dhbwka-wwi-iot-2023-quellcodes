@@ -43,3 +43,7 @@ x 248 272 308 275 4 10 Stromstärke
 b 424 304 522 429 0
 x 228 464 512 467 4 10 Doppelklick\sauf\sden\sKreis\soder\sdas\ssenkrechte\sKästchen,
 x 228 477 490 480 4 10 um\sdie\sStromstärke\soder\sden\sWiderstand\szu\sändern.
+x -322 556 175 559 4 12 →\sWelcher\sWiderstand\swird\sbenötigt,\sum\seine\sbestimmte\sStromstärke\szu\serhalten?
+x -322 537 147 540 4 12 →\sWelche\sStromstärke\sfließt\sdurch\seine\sSchaltung\s(wie\sviel\sStrom\s"zieht"\ssie?)
+x -322 512 -60 515 4 16 Typische\sFragestellungen\sfür\suns
+x -322 573 213 576 4 12 →\sLiegt\sdie\sStromstärke\sinnerhalb\sder\serlaubten\sGrenzen\sfür\sMicrocontroller\sund\sBauteil?

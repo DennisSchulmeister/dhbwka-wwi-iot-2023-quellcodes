@@ -14,7 +14,7 @@ x -323 -51 -275 -48 4 16 Merke
 x -323 3 182 6 4 12 Die\sSpannung\skann\sdaher\svereinfacht\sals\s"Energie\sje\sElektron"\sinterpretiert\swerden.
 x -321 44 -197 47 4 16 Ground\s/\sMasse
 x -322 63 449 66 4 12 Die\sSpannung\swird\simmer\sals\sDifferenz\szwischen\szwei\sPunkten\sgemessen\sund\swird\sdaher\sauch\s"elektrisches\sPotential"\sgenannt.
-x -322 78 253 81 4 12 Denn\sdie\sSpannung\sregt\sden\sStromfluss\san,\sdurch\sden\spotentiell\sArbeit\sverrichtet\swerden\skann.
+x -322 78 462 81 4 12 Denn\sdie\sSpannung\sregt\sden\sStromfluss\san,\sdurch\sden\sEnergie\stransportiert\swird,\smit\sder\spotentiell\sArbeit\sverrichtet\swerden\skann.
 x -322 94 375 97 4 12 Da\sStrom\simmer\svom\shöheren\sPotential\szum\sniedrigeren\sfließt,\swird\smeistens\sein\s"Ground"\soder\s"Masse"\sgenannter
 x -321 109 350 112 4 12 Bezugspunkt\sfestgelegt,\sauf\sden\ssich\salle\sSpannungsangaben\simplizit\sbeziehen,\swenn\snicht\sanders\sangegeben.
 x -323 125 55 128 4 12 Ground/Masse\sbesitzt\sdabei\sper\sDefinition\sein\sPotential\svon\s0V.
