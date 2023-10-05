@@ -1,0 +1,62 @@
+$ 3 0.0000049999999999999996 10.20027730826997 57 5 50 5e-11
+x 29 -26 621 -23 4 24 Digitalsignale\smit\sdem\sMicrocontroller\sauswerten
+x 31 8 785 11 4 12 Viele\sSensoren\sstellen\slediglich\slediglich\seinen\selektrischen\sKontakt\sher\sbzw.\sliefern\sein\sdigitales\sSignal,\swenn\sein\sbestimmtes
+x 31 26 805 29 4 12 Ereignis\seintritt,\szum\sBeispiel,\swenn\sein\sSchalter\sgedrückt,\seine\sTür\sgeöffnet\soder\sein\sFeuer\serkannt\swird.\sJe\snach\sFunktionsweise
+x 31 45 691 48 4 12 von\sSensor\sund\sHardwareschaltung\shandelt\ses\ssich\sdabei\sebenfalls\sum\s"Active\sHigh"\soder\s"Active\sLow"\sLogik.
+x 31 92 169 95 4 16 Active\sHigh\sLogik
+x 31 111 775 114 4 12 Im\seinfachsten\sFall\sliefert\sder\sSensor\seinfach\seine\sSpannung,\swenn\sdas\serwartete\sEreignis\seintritt.\sLiegt\sdiese\sinnerhalb\sdes
+x 31 130 774 133 4 12 Toleranzbereichs\sdes\sMicrocontrollers,\skann\ssie\sdirekt\sverbunden\swerden.\sAndernfalls\smuss\ssie\smit\seiner\sHilfsschaltung\serst
+w 344 272 368 272 2
+r 440 272 512 272 0 480
+w 568 272 600 272 0
+w 368 272 416 272 0
+b 304 240 392 296 0
+b 448 240 576 296 0
+x 304 235 418 238 4 10 Arduino\sDigitaleingang
+x 448 236 482 239 4 10 Sensor
+x 585 289 699 292 4 10 Schalter\sanklicken,\sum
+x 584 302 699 305 4 10 den\sSensor\sauszulösen
+x 32 511 797 514 4 12 In\sdiesem\sFall\swird\sein\s"Pull-Up-Widerstand"\sbenötigt,\sder\sden\sEingang\sdes\sMicrocontrollers\sauf\sHIGH\szieht,\sso\slange\sder\sSensor
+x 31 492 780 495 4 12 Schaltet\sder\sSensor\sanstatt\sder\sLogikspannung\sauf\sMasse/Ground,\swenn\sdas\sEreignis\seintritt,\sliegt\seine\sActive\sLow\sLogik\svor.
+x 31 473 164 476 4 16 Active\sLow\sLogik
+x 32 528 780 531 4 12 nicht\sauslöst.\sStellt\sder\sSensor\sden\sKontakt\sher,\sfließt\sder\sStrom\shingegen\süber\sden\sSensor\snach\sMasse/Ground\sab,\swodurch
+x 32 147 774 150 4 12 an\sden\sLogikpegel\sdes\sMicrocontrollers\sangepasst\swerden\s(bspw.\smit\seinem\sSpannungsteiler,\sTransistor\soder\sLevel-Shifter).
+x 31 165 770 168 4 12 In\sjedem\sFall\swird\sein\ssog.\s"Pull-Down-Widerstand"\sbenötigt,\sder\sden\sGPIO-Eingang\sdauerhaft\sauf\sMasse\szieht,\sso\slange\sder
+x 31 182 588 185 4 12 Sensor\snicht\sfeuert,\sum\sFehlerkennungen\saufgrund\sparasitärer\sEinstreuungen\szu\svermeiden.
+M 344 272 328 272 0 2.5
+R 600 272 600 216 0 0 40 5 0 0 0.5
+s 512 272 568 272 0 1 false
+w 416 272 440 272 0
+g 416 360 416 368 0 0
+r 416 272 416 360 0 20000
+x 499 323 652 326 4 8 Pull-Down-Widerstand\szur\sVermeidung
+x 499 334 647 337 4 8 von\sFehlerkennungen.\sJeder\sWert\sum
+x 499 345 655 348 4 8 ca.\s20k\s-\s50k\sOhm\ssollte\sfunktionieren.
+423 492 331 457 320 0
+x 30 410 747 413 4 12 Falls\sder\sSensor\skeinen\seingebauten\sWiderstand\sbesitzt\soder\seine\szu\shohe\sStromstärke\sdurchlässt,\smuss\szwischen\sdem
+x 30 429 608 432 4 12 Microcontroller\sund\sdem\sSensor\sein\sBegrenzungswiderstand\s(Vorwiderstand)\seingebaut\swerden.
+x 30 548 233 551 4 12 der\sMicrocontroller\sein\sLOW\ssieht.
+x 467 611 623 614 4 8 ca.\s20k\s-\s50k\sOhm\ssollte\sfunktionieren.
+x 467 600 615 603 4 8 von\sFehlerkennungen.\sJeder\sWert\sum
+x 467 589 609 592 4 8 Pull-Up-Widerstand\szur\sVermeidung
+r 400 600 400 680 0 20000
+g 568 680 568 688 0 0
+w 400 680 480 680 0
+s 480 680 536 680 0 1 false
+R 400 600 400 576 0 0 40 5 0 0 0.5
+M 312 680 296 680 0 2.5
+x 551 663 666 666 4 10 den\sSensor\sauszulösen
+x 552 650 666 653 4 10 Schalter\sanklicken,\sum
+x 456 645 490 648 4 10 Sensor
+x 272 643 386 646 4 10 Arduino\sDigitaleingang
+b 456 648 544 704 0
+b 272 648 360 704 0
+w 336 680 400 680 0
+w 536 680 568 680 0
+w 312 680 336 680 2
+423 456 600 417 619 0
+x 32 806 813 809 4 12 automatisch\sauf\sActive\sLow\sLogik\sumstellt\sund\sdie\sgelesenen\sWerte\sinvertiert\s(aus\sHIGH\swird\sLOW\sund\sumgekehrt).\sDer\sRaspi\shat
+x 31 751 227 754 4 16 Eingebaute\sWiderstände
+x 31 770 790 773 4 12 Viele\sMicrocontroller\sbesitzen\seingebaute\sPull-Up-\sund/oder\sPull-Down-Widerstände,\sdie\sper\sSoftware\saktiviert\swerden\skönnen.
+x 32 789 804 792 4 12 Der\sArduino\sUno\s(Atmega-Microcontroller)\shat\seinen\seingebauten\sPull-Up-Widerstand,\sbei\sdessen\sAktivierung\sder\sMicrocontroller
+x 31 823 541 826 4 12 beides,\sdie\sgelesenen\sWerte\smüssen\sin\sder\sSoftware\sjedoch\sselbst\sinvertiert\swerden.
