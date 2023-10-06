@@ -1,7 +1,7 @@
 $ 3 0.0000049999999999999996 10.20027730826997 57 5 50 5e-11
 x 29 -26 621 -23 4 24 Digitalsignale\smit\sdem\sMicrocontroller\sauswerten
-x 31 8 785 11 4 12 Viele\sSensoren\sstellen\slediglich\slediglich\seinen\selektrischen\sKontakt\sher\sbzw.\sliefern\sein\sdigitales\sSignal,\swenn\sein\sbestimmtes
-x 31 26 805 29 4 12 Ereignis\seintritt,\szum\sBeispiel,\swenn\sein\sSchalter\sgedrückt,\seine\sTür\sgeöffnet\soder\sein\sFeuer\serkannt\swird.\sJe\snach\sFunktionsweise
+x 31 8 783 11 4 12 Viele\sSensoren\sstellen\slediglich\seinen\selektrischen\sKontakt\sher\sbzw.\sliefern\sein\sdigitales\sSignal,\swenn\sein\sbestimmtes\sEreignis
+x 31 26 754 29 4 12 eintritt,\szum\sBeispiel,\swenn\sein\sSchalter\sgedrückt,\seine\sTür\sgeöffnet\soder\sein\sFeuer\serkannt\swird.\sJe\snach\sFunktionsweise
 x 31 45 691 48 4 12 von\sSensor\sund\sHardwareschaltung\shandelt\ses\ssich\sdabei\sebenfalls\sum\s"Active\sHigh"\soder\s"Active\sLow"\sLogik.
 x 31 92 169 95 4 16 Active\sHigh\sLogik
 x 31 111 775 114 4 12 Im\seinfachsten\sFall\sliefert\sder\sSensor\seinfach\seine\sSpannung,\swenn\sdas\serwartete\sEreignis\seintritt.\sLiegt\sdiese\sinnerhalb\sdes
