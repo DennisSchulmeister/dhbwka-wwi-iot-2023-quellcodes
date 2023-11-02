@@ -95,7 +95,7 @@ class RotaryEncoder {
         if (this->clk_before != clk) {
           this->clk_before = clk;
 
-          if (!clk) {
+          if (clk == LOW) {
             int dt = digitalRead(this->pin_dt);
             direction = this->ROTATION_RIGHT;
             if (dt == LOW) direction = this->ROTATION_LEFT;
