@@ -40,7 +40,7 @@ constexpr int PIN_JOYSTICK_Y   = A1;
 void setup() {
   pinMode(PIN_LED1, OUTPUT);
   pinMode(PIN_LED2, OUTPUT);
-  pinMode(PIN_JOYSTICK_BTN, OUTPUT);
+  pinMode(PIN_JOYSTICK_BTN, INPUT_PULLUP);
 }
 
 /**
@@ -51,7 +51,7 @@ void loop() {
   int joystick_y   = analogRead(PIN_JOYSTICK_Y);
   int joystick_btn = digitalRead(PIN_JOYSTICK_BTN);
 
-  if (joystick_btn) {
+  if (joystick_btn == LOW) {
     digitalWrite(PIN_LED1, HIGH);
     digitalWrite(PIN_LED2, HIGH);
   } else {
