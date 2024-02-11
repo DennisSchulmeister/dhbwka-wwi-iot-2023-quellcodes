@@ -37,7 +37,8 @@ void loop() {
   Serial.printf("\nHallo %s!\n\n", name.c_str());
 
   // WICHTIG: Zur Ausgabe des Strings mit Serial.printX() muss das String-Objekt
-  // mit der c_str()-Methode in ein null-terminiertes Byte-Array umgewandelt werden!
+  // mit der c_str()-Methode in ein null-terminiertes Byte-Array umgewandelt werden
+  // (String der Programmiersprache C)!
 }
 
 
