@@ -29,7 +29,7 @@ void setup() {
 
   xTaskCreatePinnedToCore(
     /* pcTaskCode    */  myTask1,                      // Auszuführende Funktion
-    /* pcName        */  "Task auf Core 0",            // Name des Tasks
+    /* pcName        */  "My Task 1",                  // Name des Tasks
     /* uxStackDepth  */  2048,                         // Stack-Größe in Words
     /* pvParameters  */  NULL,                         // Zeiger auf Task-Parameter oder NULL
     /* uxPriority    */  2,                            // Task-Priorität
@@ -39,7 +39,7 @@ void setup() {
 
   xTaskCreatePinnedToCore(
     /* pcTaskCode    */  myTask2,
-    /* pcName        */  "Task auf Core 1",
+    /* pcName        */  "My Task 2",
     /* uxStackDepth  */  2048,
     /* pvParameters  */  NULL,
     /* uxPriority    */  2,
@@ -53,32 +53,38 @@ void setup() {
  * Arduino Loop-Funktion
  */
 void loop() {
-  Serial.println("[loop]: CPU-Core 0");
+  int core_id = xPortGetCoreID();
+
+  Serial.printf("[loop]: CPU-Core %i\n", core_id);
   delay(3000);
 }
 
 
 /**
- * Task auf CPU-Core 0
+ * Task 1
  */
 void myTask1(void* pvParameters) {
+  int core_id = xPortGetCoreID();
+
   delay(1000);
 
   while (true) {
-    Serial.println("[myTask1]: CPU-Core 0");
+    Serial.printf("[myTask1]: CPU-Core %i\n", core_id);
     delay(3000);
   }
 }
 
 
 /**
- * Task auf CPU-Core 1
+ * Task 2
  */
 void myTask2(void* pvParmaters) {
+  int core_id = xPortGetCoreID();
+
   delay(2000);
 
   while (true) {
-    Serial.println("[myTask2]: CPU-Core 1");
+    Serial.printf("[myTask2]: CPU-Core %i\n", core_id);
     delay(3000);
   }
 }
