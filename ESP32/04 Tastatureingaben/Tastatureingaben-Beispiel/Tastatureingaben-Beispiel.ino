@@ -34,7 +34,10 @@ void setup() {
  */
 void loop() {
   String name = input("Wie heißt du? ");
-  Serial.printf("\nHallo %s!\n\n", name);
+  Serial.printf("\nHallo %s!\n\n", name.c_str());
+
+  // WICHTIG: Zur Ausgabe des Strings mit Serial.printX() muss das String-Objekt
+  // mit der c_str()-Methode in ein null-terminiertes Byte-Array umgewandelt werden!
 }
 
 
