@@ -84,7 +84,7 @@
  * [2] https://www.arduino.cc/reference/en/language/variables/utilities/progmem/
  * [3] http://www.learningaboutelectronics.com/Articles/Low-pass-filter-calculator.php
  */
-#include "lib/Oscilator.h"
+#include "Oscilator.h"
 
 // #define SERIAL_OUTPUT
 

@@ -67,7 +67,7 @@
  * https://www.arduino.cc/reference/en/language/functions/time/millis/
  */
 
-#include "lib/DebouncedDigitalInput.h"
+#include "DebouncedDigitalInput.h"
 
 auto button = DebouncedDigitalInput(2, true, 100);
 
