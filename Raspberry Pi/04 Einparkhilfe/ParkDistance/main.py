@@ -57,11 +57,11 @@ https://gpiozero.readthedocs.io/en/stable/recipes.html#distance-sensor
 import time
 from gpiozero import Button, DistanceSensor, Buzzer
 
-DISTANCE_MIN_CM    = 3.0;
-DISTANCE_MAX_CM    = 30.0;
-DISTANCE_INFINITY  = 99999;
-FREQUENCY_MIN_HZ   = 1.0;
-FREQUENCY_MAX_HZ   = 8.00;
+DISTANCE_MIN_CM    = 3.0
+DISTANCE_MAX_CM    = 30.0
+DISTANCE_INFINITY  = 99999
+FREQUENCY_MIN_HZ   = 1.0
+FREQUENCY_MAX_HZ   = 8.00
 
 def main():
     button = Button(26, pull_up=True, bounce_time=0.1)
