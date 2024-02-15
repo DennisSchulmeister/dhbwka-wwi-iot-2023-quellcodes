@@ -28,6 +28,12 @@ constexpr int BUTTON2_PIN = 18;
 // Initialisierung der Variable mit ihrem Standardwert.
 bool led_value = {};
 
+// // Initialisierung mit explizitem Wert (gebräuchliche Syntax)
+// bool led_value = false;
+
+// // Neuere Syntax für die Initialisierung (einheitlich für Arrays und Objekte)
+// bool led_value = {false};
+
 
 void setup() {
   pinMode(LED_PIN, OUTPUT);
