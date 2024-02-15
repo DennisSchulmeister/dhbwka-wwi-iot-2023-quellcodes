@@ -16,9 +16,7 @@
  * String: https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/
  */
 
-
-// Vorwärtsdeklaration der input-Funktion
-String input(const char* prompt, bool blocking = true);
+#include "serial-input.h"
 
 
 /**
@@ -33,36 +31,10 @@ void setup() {
  * Unenddlich auf ausgeführte Programmlogik
  */
 void loop() {
-  String name = input("Wie heißt du? ");
+  String name = serial_input("Wie heißt du? ");
   Serial.printf("\nHallo %s!\n\n", name.c_str());
 
   // WICHTIG: Zur Ausgabe des Strings mit Serial.printX() muss das String-Objekt
   // mit der c_str()-Methode in ein null-terminiertes Byte-Array umgewandelt werden
   // (String der Programmiersprache C)!
-}
-
-
-/**
- * Hilfsfunktion zum Einlesen einer Zeile über den USB Serial Port.
- * In der Arduino IDE muss die Zeile in das Eingabefeld ganz oben eingegen werden.
- *
- * Die Funktion blockiert so lange, bis eine komplette Zeile empfangen wurde.
- * Falls dies nicht gewünscht ist, muss der zweite Parameter mit false belegt werden.
- * In diesem Fall kann mit Serial.setTimeout() ein Timeout festgelegt werden, nachem
- * die Funktion automatisch einen leeren String zurückliefert, wenn keine Eingabe
- * empfangen wurde.
- */
-String input(const char* prompt, bool blocking) {
-  String result = {};
-
-  Serial.print(prompt);
-
-  while (result.length() == 0) {
-    result = Serial.readStringUntil('\n');
-    result.trim();
-
-    if (!blocking) break;
-  }
-
-  return result;
 }
