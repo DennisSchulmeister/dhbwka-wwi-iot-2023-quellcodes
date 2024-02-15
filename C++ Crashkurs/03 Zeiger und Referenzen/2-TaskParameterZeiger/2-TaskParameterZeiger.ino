@@ -21,6 +21,7 @@ typedef struct {
   const char* name;         // String zur Unterscheidung der Tasks
 } my_task_parameters_t;
 
+
 void setup() {
   Serial.begin(115200);
 
@@ -46,6 +47,7 @@ void setup() {
   );
 }
 
+
 void loop() {
 }
 
@@ -57,9 +59,10 @@ void myTask(void* pvParameters) {
   // 1: Type-cast, weil der Zeiger den Typ void hat (Klammerausdruck)
   // 2: Dereferenzieren des Zeigers, um an die Struktur zu kommen (Sternchen)
   // 3: Kopie der übergebenen Struktur in der Variable parameters speichern
-  //    Warum eine Kopie= Weil der Variablentyp keine Referenz und kein Zeiger ist!
+  //    Warum eine Kopie? Weil der Variablentyp keine Referenz und kein Zeiger ist!
+  //    Aber Achtung: Es handelt sich um eine flache Kopie!
   //
-  //                   (3)          (2)(1) 
+  //                   (3)        (2)(1) 
   my_task_parameters_t parameters = *(my_task_parameters_t*) pvParameters;
 
   delay(parameters.pre_delay);
