@@ -21,10 +21,11 @@
  * Benötigte Bibliotheken
  * ----------------------
  *
- * Damit das Beispiel funktioniert, muss im Library Manager der Arduino IDE folgende Bibliothek
+ * Damit das Beispiel funktioniert, müssen im Library Manager der Arduino IDE folgende Bibliothek
  * installiert werden:
  *
- * ESP32 File Manager for Generation Klick ESPFMfGK
+ *  - ESP32 File Manager for Generation Klick ESPFMfGK
+ *  - CRC32
  *
  * Danach kann der Quellcode gebaut und hochgeladen werden. Das Programm fragt beim Start nach
  * den WLAN-Zugangsdaten in der seriellen Konsole, so dass diese nicht im Quellcode hinterlegt
@@ -39,155 +40,41 @@
  * https://github.com/holgerlembke/ESPFMfGK/blob/main/examples/simple/simple.ino
  */
 
-#include <WiFi.h>
+#include <ESPFMfGK.h>
+#include <FS.h>
+#include <FFat.h>
 
+#include "wifi-wizard.h"
 
-String input(const char* prompt, bool blocking = true);
-
+ESPFMfGK filemgr(8080);
 
 void setup() {
   Serial.begin(115200);
   delay(1000);
 
-  wifi_connect();
+  wifi_wizard();
 
-  Serial.println("WLAN ist verbunden!");
+  filemgr.WebPageTitle = "File Manager";
+  filemgr.BackgroundColor = "white";
+  filemgr.textareaCharset = "accept-charset=\"utf-8\"";
+  
+  if (FFat.begin(true)) {
+    if (!filemgr.AddFS(FFat, "Flash/FFat", false)) {
+      Serial.println(F("FAT-Dateisystem konnte nicht hinzugefügt werden!"));
+    }
+  } else {
+    Serial.println(F("FAT-Filesystem nicht gefunden!"));
+  }
+
+  if (filemgr.begin()) {
+    Serial.print(F("Dateimanager bereit unter http://"));
+    Serial.print(WiFi.localIP());
+    Serial.println(F(":8080/"));
+  } else {
+    Serial.println(F("Dateimanager konnte nicht gestartet werden!"));
+  }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-
-// TODO: In wiederverwendbares Include auslagern
-
-/**
- * Abwicklung der WLAN-Verbindung. Gibt true oder false zurück, je nachdem, ob eine
- * Verbindung hergestellt werden konnte.
- */
-void wifi_connect() {
-  bool connected = false;
-
-  while (!connected) {
-    // Vorhandene WLAN-Netze anzeigen
-    WiFi.mode(WIFI_STA);
-    WiFi.disconnect();
-    delay(100);
-
-    size_t n_wifi = WiFi.scanNetworks();
-
-    if (n_wifi == 0) {
-      Serial.println("Kein WLAN gefunden.");
-      delay(2000);
-      continue;
-    }
-
-    Serial.printf("%u WLAN-Netze gefunden:\n\n", n_wifi);
-
-    for (int i = 0; i < n_wifi; i++) {
-      Serial.printf("[%u]  ", i);
-      Serial.printf("%.32s  ", WiFi.SSID(i).c_str());
-      Serial.printf("(%lu)  ", WiFi.RSSI(i));
-
-      switch (WiFi.encryptionType(i)) {
-        case WIFI_AUTH_OPEN:
-          Serial.println("OPEN");
-          break;
-        case WIFI_AUTH_WEP:
-          Serial.println("WEP");
-          break;
-        case WIFI_AUTH_WPA_PSK:
-          Serial.println("WPA_PSK");
-          break;
-        case WIFI_AUTH_WPA2_PSK:
-          Serial.println("WPA2_PSK");
-          break;
-        case WIFI_AUTH_WPA_WPA2_PSK:
-          Serial.println("WPA_WPA2_PSK");
-          break;
-        case WIFI_AUTH_WPA2_ENTERPRISE:
-          Serial.println("WPA2_ENTERPRISE");
-          break;
-        default:
-          Serial.println();
-      }
-    }
-
-    Serial.println();
-    String wifi_number_s = input("Bitte die Nummer des zu verwendenden WLANs eingeben: ");
-    Serial.printf("%s\n", wifi_number_s.c_str());
-
-    int wifi_number_i = atoi(wifi_number_s.c_str());
-    String ssid = WiFi.SSID(wifi_number_i);
-
-    if (wifi_number_i < 0 || wifi_number_i > n_wifi) {
-      Serial.println("Ungültige Eingabe!\n");
-      continue;
-    }
-
-    // Verbindung zu ausgewähltem Netz herstellen
-    Serial.printf("Stelle Verbindung her zu %s\n", ssid.c_str());
-
-    switch (WiFi.encryptionType(wifi_number_i)) {
-      case WIFI_AUTH_OPEN:
-        WiFi.begin(ssid);
-        break;
-
-      case WIFI_AUTH_WPA_PSK:
-      case WIFI_AUTH_WPA2_PSK:
-      case WIFI_AUTH_WPA_WPA2_PSK: {
-        String password = input("Bitte WLAN-Passwort eingeben:\n");
-      
-        WiFi.begin(ssid, password);
-        break;
-      }
-        
-      case WIFI_AUTH_WPA2_ENTERPRISE: {
-        String username = input("Bitte Benutzernamen eingeben: ");
-        Serial.println(username.c_str());
-        String password = input("Bitte Passwort eingeben:\n");
-
-        WiFi.begin(ssid, WPA2_AUTH_PEAP, username, username, password);
-        break;
-      }
-
-      default:
-        Serial.println("Authentifizierungsmethode nicht unterstützt. Bitte anderes WLAN auswählen!\n");
-        continue;
-    }
-
-    for (int i = 0; i < 15; i++) {
-      if (WiFi.status() != WL_CONNECTED) {
-        Serial.print(".");
-        delay(1000);
-      } else {
-        connected = true;
-      }
-    }
-
-    Serial.println();
-
-    if (!connected) {
-      Serial.println("Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut.\n");
-    }
-  }
-}
-
-
-/**
- * Hilfsfunktion zum Einlesen einer Textzeile über die serielle Konsole
- */
-String input(const char* prompt, bool blocking) {
-  String result = {};
-
-  Serial.print(prompt);
-
-  while (result.length() == 0) {
-    result = Serial.readStringUntil('\n');
-    result.trim();
-
-    if (!blocking) break;
-  }
-
-  return result;
+  filemgr.handleClient();
 }
