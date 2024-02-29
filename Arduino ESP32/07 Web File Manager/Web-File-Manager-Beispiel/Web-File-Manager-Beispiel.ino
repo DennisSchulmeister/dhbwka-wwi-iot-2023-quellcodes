@@ -21,7 +21,7 @@
  * Benötigte Bibliotheken
  * ----------------------
  *
- * Damit das Beispiel funktioniert, müssen im Library Manager der Arduino IDE folgende Bibliothek
+ * Damit das Beispiel funktioniert, müssen im Library Manager der Arduino IDE folgende Bibliotheken
  * installiert werden:
  *
  *  - ESP32 File Manager for Generation Klick ESPFMfGK
