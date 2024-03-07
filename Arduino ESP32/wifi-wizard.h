@@ -72,7 +72,7 @@ void wifi_wizard() {
 
     switch (WiFi.encryptionType(wifi_number_i)) {
       case WIFI_AUTH_OPEN:
-        WiFi.begin(ssid);
+        WiFi.begin(ssid.c_str());
         break;
 
       case WIFI_AUTH_WPA_PSK:
@@ -80,7 +80,7 @@ void wifi_wizard() {
       case WIFI_AUTH_WPA_WPA2_PSK: {
         String password = serial_input("Bitte WLAN-Passwort eingeben:\n");
 
-        WiFi.begin(ssid, password);
+        WiFi.begin(ssid.c_str(), password.c_str());
         break;
       }
 
@@ -89,7 +89,7 @@ void wifi_wizard() {
         Serial.println(username.c_str());
         String password = serial_input("Bitte Passwort eingeben:\n");
 
-        WiFi.begin(ssid, WPA2_AUTH_PEAP, username, username, password);
+        WiFi.begin(ssid.c_str(), WPA2_AUTH_PEAP, username.c_str(), username.c_str(), password.c_str());
         break;
       }
 

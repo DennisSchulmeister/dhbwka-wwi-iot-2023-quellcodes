@@ -29,7 +29,7 @@
 
 
 constexpr char *tb_host  = "thingsboard.zimolong.eu";
-constexpr int   tb_port  = 21;
+constexpr int   tb_port  = 1883;
 constexpr char *tb_token = "OKFx46PoESgumH4jUavF";
 ThingsBoard thingsboard  = {};
 
@@ -45,6 +45,7 @@ void setup() {
   thingsboard.connect(tb_host, tb_port, tb_token);                  // Verbindung zum Server herstellen
   thingsboard.subscribe_attribute_values(on_attribute_values);      // Shared Attribute Werte vom Server empfangen
   thingsboard.send_attribute_request("enabled");                    // Aktuellen Wert des Shared Attribute "enabled" anfordern
+  thingsboard.subscribe_rpc_request(on_rpc_request);                // RPC-Anfrage vom Server verarbeiten
 }
 
 
@@ -72,5 +73,19 @@ void loop() {
 void on_attribute_values(JsonObject values) {
   if (values.containsKey("enabled")) {            // Prüfen, ob der gewünschte Wert überhaupt gesendet wurde
      enabled = values["enabled"].as<bool>();      // Empfangenen Wert in eine globale Variable übernehmen
+  }
+}
+
+
+void on_rpc_request(int request_id, const char *method, JsonObject parameters) {
+  String _method = method;
+
+  if (_method.equals("setValue")) {
+    String attribute = parameters["attribute"];
+    String value     = parameters["value"];
+
+    if (attribute.equals("enabled")) {
+      enabled = value.equals("true");
+    }
   }
 }
