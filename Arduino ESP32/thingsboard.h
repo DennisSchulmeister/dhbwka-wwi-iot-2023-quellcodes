@@ -28,7 +28,8 @@
 #include <esp_log.h>
 #include <cstring>
 
-static const char* TAG = "ThingsBoard";
+#define TAG "ThingsBoard"
+
 static const size_t BUFFER_SIZE = 128;
 
 typedef void (*on_attribute_values_t)(JsonObject values);
@@ -143,6 +144,9 @@ class ThingsBoard {
       this->mqtt_publish("v1/devices/me/telemetry", payload);
     }
 
+    /**
+     * Neue Attribut-Werte an ThingsBoard senden.
+     */
     void send_attributes(JsonDocument values) {
       char payload[BUFFER_SIZE];
       serializeJson(values, payload);
