@@ -3,8 +3,8 @@
  * ==============
  *
  * Dieses Beispiel nutzt den KY-037 Sensor (eigentlich kein Sensor, sondern ein
- * Kleinmembranmikrofon) des Sensor Kits, um die Umgebungslautstärke zu messen.
- * Vom Grundprinzip entspricht dies einfach einem regelmäßigen analogRead().
+ * Kleinmembran-Kondensatormikrofon) des Sensor Kits, um die Umgebungslautstärke
+ * zu messen. Vom Grundprinzip entspricht dies einfach einem regelmäßigen analogRead().
  * Dabei muss jedoch einiges beachtet werden:
  *
  * Hardware-Aufbau
