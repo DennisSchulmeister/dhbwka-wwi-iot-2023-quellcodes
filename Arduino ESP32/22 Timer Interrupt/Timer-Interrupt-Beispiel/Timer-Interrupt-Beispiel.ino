@@ -76,7 +76,7 @@ void loop() {
 
 
 /**
- * VORSICHT: Dies ist ein INterrupt Handler. Hier keine langwierigen Dinge machen, da dies
+ * VORSICHT: Dies ist ein Interrupt Handler. Hier keine langwierigen Dinge machen, da dies
  * die anderen Tasks der CPU blockiert. Bestimmte Dinge wie z.B. serial.println() bringen
  * den ESP32 sogar zum Absturz!
  */
