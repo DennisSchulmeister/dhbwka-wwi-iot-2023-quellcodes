@@ -50,24 +50,22 @@ void setup() {
   pinMode(2, OUTPUT);
 
   timer = timerBegin(
-    /* num     */ 0,            // Hardwaretimer 0 bis 3
-    /* divider */ 800,          // Zählgeschwindigkeit: 80 MHz / divider
-    /* countUp */ true          // Zählrichtung
+    /* frequency */ 1000000        // Zählgeschwindigkeit in Hz (sollte ca. 1 MHz betragen)
   );
 
   timerAttachInterrupt(
-    /* timer */ timer,          // Timer-Struktur
-    /* fn    */ &onTimer,       // Callback-Funktion
-    /* edge  */ false           // Muss false sein
+    /* timer    */ timer,          // Timer-Struktur
+    /* userFunc */ &onTimer        // Callback-Funktion
   );
 
-  timerAlarmWrite(
-    /* timer       */ timer,    // Timer-Struktur
-    /* alarm_value */ 100000,   // Bis zu welchem Wert der Timer zählen soll
-    /* autoreload  */ true      // Timer automatisch neustarten
+  timerAlarm(
+    /* timer       */  timer,      // Timer-Struktur
+    /* alarm_value */  1000000,    // Bis zu welchem Wert der Timer zählen soll
+    /* autoreload  */  true,       // Timer automatisch neustarten
+    /* reload_count */ 0           // Wie oft der Timer neugestartet werden soll (0 = unbegrenzt)
   );
 
-  timerAlarmEnable(timer);
+  timerStart(timer);
 }
 
 

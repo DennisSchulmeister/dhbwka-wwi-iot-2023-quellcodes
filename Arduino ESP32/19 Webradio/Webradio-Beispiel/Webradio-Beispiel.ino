@@ -16,10 +16,15 @@
  * da lediglich ein Audiosginal wiedergegeben werden soll. Die Pins sind frei wählbar und können
  * über die Konstanten im Quellcode angepasst werden:
  *
- *   - GPIO5       -> Serial Data
- *   - GPIO18      -> Serial Clock
- *   - GPIO19      -> L/R Clock
- *   - GPIO1 (TX0) -> Master Clock
+ *   - GPIO5  -> Serial Data
+ *   - GPIO18 -> Serial Clock
+ *   - GPIO19 -> L/R Clock
+ *   - GPIO0  -> Master Clock (nur GPIO0/1/3 erlaubt)
+ *
+ * Vorsicht bei der Master Clock: GPIO1 und 3 werden auch für die serielle Kommunikation genutzt
+ * (UART 0). Werden Sie für die Master Clock verwendet, funktioniert die serielle Konsole in der
+ * Arduino IDE nicht mehr. :-) Da aber nicht alle ESP32-Boards den GPIO0-Pin besitzen, verwendet
+ * man am besten einen DAC-Chip wie den PCM5102A, der die Master Clock nicht zwingend benötigt.
  *
  * Die internen DACs des ESP32 sind fest mit den GPIOs 25 und 26 verdrahtet. Hier kann ein kleiner
  * Kopfhöher angeschlossen werden:
@@ -32,7 +37,7 @@
  * ======================
  *
  * Dieses Beispiel setzt die Bibliothek ESP32-audioI2S voraus, die unter folgender Adresse
- * heruntergeladen weren kandn: https://github.com/schreibfaul1/ESP32-audioI2S/tags
+ * heruntergeladen weren kann: https://github.com/schreibfaul1/ESP32-audioI2S/tags/
  *
  * Zur Installation laden Sie eine ZIP-Datei herunter und speichern diese ohne Entpacken
  * ab. Anschließend klicken Sie in der Arduino IDE auf "Sketch -> Include Library ->
@@ -63,6 +68,7 @@
 #include "serial-input.h"
 #include <Audio.h>
 #include <string.h>
+#include <driver/i2s.h>
 
 
 // Vordefinierte Audio-Streams
@@ -92,7 +98,7 @@ const audio_stream_t audio_streams[] = {
   constexpr uint8_t I2S_SCLK  = 18;
   constexpr uint8_t I2S_LRCLK = 19;
   constexpr uint8_t I2S_SDIN  = 5;
-  constexpr  int8_t I2S_MCLK  = 3; // I2S_GPIO_UNUSED;
+  constexpr  int8_t I2S_MCLK  = I2S_GPIO_UNUSED;
 
   Audio audio;
 #endif
@@ -110,6 +116,7 @@ void setup() {
     Serial.println("Nutze interne D/A-Wandler\n");
   #else
     Serial.println("Nutze externen I²S D/A-Wandler\n");
+    audio.setI2SCommFMT_LSB(true);  // Benötigen manche DACs
     audio.setPinout(I2S_SCLK, I2S_LRCLK, I2S_SDIN, I2S_MCLK);
   #endif
 

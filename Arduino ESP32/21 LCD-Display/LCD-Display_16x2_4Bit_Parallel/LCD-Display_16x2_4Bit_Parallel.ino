@@ -14,7 +14,7 @@
  * Geräten verbaut wird.
  *
  * Wir beschränken uns in dem Beispiel auf eine einfache Textausgabe mit dem eingebauten Zeichenasatz
- * des Display-Controllers, auch wenn dieser oft keine Umlaute enthält. Wer sich darüf interessiert,
+ * des Display-Controllers, auch wenn dieser oft keine Umlaute enthält. Wer sich dafür interessiert,
  * findet unter folgendem Link eine ausführlichere Anleitung, die auch die Verwendung eigener
  * Schriftzeichen demonstriert: https://www.makerguides.com/interfacing-esp32-and-16x2-lcd-parallel-data-without-i2c/
  *
@@ -33,11 +33,11 @@
  *    VDD            VIN (5V)
  *    A              VIN (5V)
  *    K              GND
- *    V0             GND
+ *    V0             Spannungsteiler
  *
- * V0 dient der Kontrastregelung des Displays. Hier kann ein Potentiometer angeschlossen werden,
- * der als Spannungsteiler eine variable Spannung zwischen 0...5V generiert. Im praktischen Versuch
- * hat sich aber gezeigt, dass es oft ausreicht, den Pin einfach mit Ground zu verbinden.
+ * V0 dient der Kontrastregelung des Displays. Hier muss ein Potentiometer angeschlossen werden,
+ * der als Spannungsteiler eine variable Spannung zwischen 0...5V generiert. In den meisten Fällen
+ * zeigt das Display sonst scheinbar keinen Inhalt.
  *
  * VORSICHT: Bleibt V0 unverbunden, sieht man auf dem Display in der Regel nichts.
  *

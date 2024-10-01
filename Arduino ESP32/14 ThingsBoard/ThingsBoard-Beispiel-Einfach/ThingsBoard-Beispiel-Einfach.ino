@@ -75,7 +75,6 @@ void on_attribute_values(JsonObject values) {
      enabled = values["enabled"].as<bool>();      // Empfangenen Wert in eine globale Variable übernehmen
   }
 }
-y
 
 void on_rpc_request(int request_id, const char *method, JsonObject parameters) {
   String _method = method;

@@ -12,7 +12,7 @@
  * PWM ja durch schnelles Ein- und Ausschalten nur die zeitlich gemittelte
  * Spannung reduziert wird.
  *
- * Dieser Sketch, versucht mit einem kleinen Hardwareaufbau dennoch ein
+ * Dieser Sketch versucht mit einem kleinen Hardwareaufbau dennoch ein
  * Analogsignal zu generieren. Denn ein PWM-Signal mit sehr hoher Frequenz
  * (ca. 10x so hoch wie die analoge Zielfrequenz) kann durch einen einfachen
  * Tiefpassfilter "integriert" und somit in die gewünschte Analogschwingung

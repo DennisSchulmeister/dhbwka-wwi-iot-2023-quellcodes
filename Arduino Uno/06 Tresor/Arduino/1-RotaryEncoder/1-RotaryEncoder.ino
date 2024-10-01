@@ -20,7 +20,7 @@
  * Hardwareaufbau:
  * ---------------
  *
- * Die Schaltung können Sie anhand den Konsten unten ableiten. Es ist nicht schwer, da der Drehregler
+ * Die Schaltung können Sie aus den Konstanten unten ableiten. Es ist nicht schwer, da der Drehregler
  * direkt mit dem Arduino verbunden werden kann.
  *
  * Relevante Dokumentation

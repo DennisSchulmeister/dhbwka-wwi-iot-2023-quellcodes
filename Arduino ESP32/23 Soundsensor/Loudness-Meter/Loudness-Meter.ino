@@ -134,7 +134,7 @@
 
 
 constexpr uint32_t PIN                = 34;           // Analog Input Pin
-constexpr uint32_t SR                 = 5000;         // Sample Rate in Hzsehr
+constexpr uint32_t SR                 = 5000;         // Sample Rate in Hz
 constexpr uint32_t DURATION_MS        = 2000;         // Puffer-Länge in Milisekunden
 constexpr uint32_t UPDATE_MS          = 500;          // Aktualisierung alle X Milisekunden
 
