@@ -1,0 +1,31 @@
+$ 1 0.000005 10.20027730826997 50 5 50 5e-11
+x 574 162 1011 165 4 24 Spannungsabfall\sentlang\seines\sBauteils
+x 575 201 1124 234 4 12 Haben\swir\snur\seinen\sVerbraucher\sin\sunserer\sSchaltung,\sfällt\sdaran\sdie\skomplette\sSpannung\sab.\\nDas\sheißt:\sDer\sVerbraucher\smuss\sdie\skomplette\sEnergie\sumsetzen,\sum\sden\sSpannungsunterschied\\nan\sseinen\sbeiden\sEnden\szu\süberbrücken.
+L 768 320 704 320 0 0 false 5 0
+r 768 320 864 320 0 500
+370 960 320 1024 320 1 0 0
+g 1024 320 1024 352 0 0
+x 613 316 691 345 4 10 L/H\sanklicken,\\num\sden\sAusgang\\nzu\sschalten
+x 760 280 904 296 4 10 Widerstand\sals\sErsatzschaltbild\\nfür\sdas\sangeschlossene\sBauteil
+w 864 320 960 320 0
+x 982 280 1087 296 4 10 Gemessene\sStärke\sdes\\nentnommenen\sStroms
+p 768 384 864 384 3 0 0
+w 768 384 768 320 0
+w 864 384 864 320 0
+x 764 414 857 430 4 10 Spannungsabfall\\nentlang\sdes\sBauteils
+x 575 463 1169 481 4 12 Merke:\sSpannungsabfall\sist\snicht\sMüll,\ssondern\sdie\sdurch\sdas\sBauteil\sausgelöste\sMinderung\sder\sSpannung,\\nindem\ses\sdie\süber\sdie\sSpannung\stransportiere\sEnergie\s(1\sVolt\s\q\s1\sJoule\s/\s1\sCoulomb)\sumwandelt.
+x 577 538 1113 556 4 12 Schalten\swir\smehrere\sBauteile\shintereinander\s(in\sReihe),\sfällt\san\sjedem\sein\sTeil\sder\sSpannung\sab.\\nDer\sSpannungsabfall\sje\sBauteil\sist\sdabei\sproportional\szu\sseinem\sWiderstand.
+x 761 737 935 740 4 10 Spannungsabfall\sentlang\sder\sBauteile
+w 864 704 864 640 0
+w 768 704 768 640 0
+p 768 704 864 704 3 0 0
+x 982 600 1087 616 4 10 Gemessene\sStärke\sdes\\nentnommenen\sStroms
+x 760 600 904 616 4 10 Widerstand\sals\sErsatzschaltbild\\nfür\sdas\sangeschlossene\sBauteil
+x 613 636 691 665 4 10 L/H\sanklicken,\\num\sden\sAusgang\\nzu\sschalten
+g 1024 640 1024 672 0 0
+370 960 640 1024 640 1 0 0
+r 768 640 864 640 0 250
+L 768 640 704 640 0 0 false 5 0
+r 864 640 960 640 0 500
+p 864 704 960 704 3 0 0
+w 960 704 960 640 0
