@@ -1,0 +1,34 @@
+$ 1 0.000005 10.20027730826997 45 5 50 5e-11
+w 240 304 240 240 0
+w 240 240 352 240 0
+r 352 240 416 240 0 110
+370 416 240 464 240 1 0 0
+b 352 208 483 274 0
+w 464 240 576 240 0
+w 240 368 240 304 0
+w 464 368 576 368 0
+b 352 336 483 402 0
+370 416 368 464 368 1 0 0
+r 352 368 416 368 0 110
+w 240 368 352 368 0
+w 576 240 576 304 0
+w 576 368 576 304 0
+370 576 304 640 304 1 0 0
+g 640 304 640 320 0 0
+x 352 199 434 202 4 14 Arduino\sUno
+x 349 420 431 423 4 14 Arduino\sUno
+v -16 304 32 304 0 0 40 1.2 0 0 0.5
+x -8 337 21 340 4 15 1,2V
+x 40 337 69 340 4 15 1,2V
+v 32 304 80 304 0 0 40 1.2 0 0 0.5
+x 88 337 117 340 4 15 1,2V
+v 80 304 128 304 0 0 40 1.2 0 0 0.5
+x 136 337 165 340 4 15 1,2V
+v 128 304 176 304 0 0 40 1.2 0 0 0.5
+b -32 272 193 352 0
+g -64 352 -64 368 0 0
+w -16 304 -64 304 0
+w -64 304 -64 352 0
+w 176 304 240 304 2
+x -76 -1 625 2 4 24 Stromversorgung\sfür\szwei\sArduino\sUno\s(ohne\sweitere\sBauteile)
+x -76 34 637 157 4 12 Ein\sArduino\sUno\sohne\sweitere\sBauteile\sbenötigt\sbei\s5V\sSpannung\sca.\s45\smA\sStrom.\sSollen\smehrere\sArduinos\s(oder\sganz\sgenerell\\nmehrere\sGeräte)\smit\sStorm\sversorgt\swerden,\smüssen\sdiese\stypischerweise\sparallel\sgeschaltet\swerden,\sum\sdieselbe\sSpannung\\nzu\serhalten.\sDie\sbenötigte\sStromstärke\saddiert\ssich\sdann\seinfach\sauf\s(Kirchhoff\sKnotenregel\s/\sCurrent\sLaw).\\n\\nEine\stypischer\sAkku\sals\sMignonzelle\s(Bauform\sAA)\sbesitzt\seine\sSpannung\svon\s1,2\sV\sund\sNennladung\svon\sca.\s800\sAh.\sEs\smüssen\\ndaher\svier\sAkkus\sin\sReihe\sgeschaltet\swerden,\sum\sca.\s5V\szu\serhalten,\swobei\sdie\sSchaltung\sca.\s9\sStunden\sbetrieben\swerden\skann.\\nWichtig\ssind\sdaher\s(neben\sbesseren\sAkkus)\szusätzliche\sStromspar-Maßnahmen,\sum\sdie\sBatterielaufzeit\szu\serhöhen.\\n\\nVgl.\shttps://learn.sparkfun.com/tutorials/reducing-arduino-power-consumption/all
