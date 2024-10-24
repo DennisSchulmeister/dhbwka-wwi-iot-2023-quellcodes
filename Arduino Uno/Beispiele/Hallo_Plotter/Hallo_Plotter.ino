@@ -1,4 +1,4 @@
-/* Hallo serieller PLotter
+/* Hallo serieller Plotter
  * =======================
  *
  * Dieses Beispiel misst eine analoge Spannung am Analogeingang A0 und stellt sie mit dem seriellen Plotter
