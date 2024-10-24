@@ -41,6 +41,7 @@ constexpr int pin_output  = 11;
 constexpr int debounce_ms = 50;
 
 constexpr uint8_t default_value = 120;
+constexpr uint8_t delta = 10;
 
 /**
  * Initialisierung der Hardware nach dem Einschalten
@@ -104,14 +105,14 @@ void loop() {
   readButton(pin_button3, &button3);
 
   if (button1 && toggle1) {
-    if (value < 240) value += 20;
+    if (value <= (255 - delta)) value += delta;
     toggle1 = false;
   } else if (!button1) {
     toggle1 = true;
   }
 
   if (button2 && toggle2) {
-    if (value >= 20) value -= 20;
+    if (value >= delta) value -= delta;
     toggle2 = false;
   } else if (!button2) {
     toggle2 = true;
