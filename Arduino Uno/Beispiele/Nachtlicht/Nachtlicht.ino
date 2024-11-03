@@ -8,6 +8,11 @@
  *
  * HINWEIS: Der Sensor liefert eine umso größere Spannung, je dunkler es ist!
  *
+ * HINWEIS: Die Buttons werden hier mit der delay()-Funktion rudimentär entprellt. Jedoch wird, um nicht vom
+ * Analogsensor abzulenken, nicht geprüft, ob ein Button auch tatsächlich wieder losgelassen wurde, bevor eine
+ * Aktion ausgelöst wird. In einem echten Programm sollte man das vor allem bei dem Toggle-Button machen, der
+ * bei erkanntem Tastendruck den aktuellen Modus wechselt.
+ *
  * Hardwareaufbau:
  * ---------------
  *

@@ -8,6 +8,9 @@
  * angesteuert und muss den Pin bei Betägigung daher nach GND durchschalten (um 5V aus dem Arduino abfließen
  * zu lassen).
  *
+ * HINWEIS: Die Buttons werden hier absichtlich nicht entprellt. Sie werden daher feststellen, dass der
+ * erkannte Wert ein paar mal hin und her schwankt, wenn Sie einen Button drücken.
+ *
  * Hardwareaufbau:
  * ---------------
  *
