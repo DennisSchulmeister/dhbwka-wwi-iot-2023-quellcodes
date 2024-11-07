@@ -21,13 +21,13 @@
  * beiden software-emulierten seriellen Verbindungen wie folgt:
  *
  *   +-------------------+         +-------------------+         +-------------------+
- *   |        Pin 2 (RX) |<--------| Pin 3 (TX)    GND |<------->| GND    Pin 2 (RX) |<--- ...
- *   |        Pin 3 (TX) |-------->| Pin 2 (RX)        |         |        Pin 3 (TX) |---- ...
+ *   |        Pin 2 (RX) |<--------| Pin 5 (TX)    GND |<------->| GND    Pin 2 (RX) |<--- ...
+ *   |        Pin 3 (TX) |-------->| Pin 4 (RX)        |         |        Pin 3 (TX) |---- ...
  *   |                   |         |                   |         |                   |
  *   |     Arduino 1     |         |     Arduino 2     |         |     Arduino 3     |
  *   |                   |         |                   |         |                   |
- *   |               GND |<------->| GND    Pin 4 (RX) |<--------| Pin 5 (TX)        |
- *   |                   |         |        Pin 5 (TX) |-------->| Pin 4 (RX)        |
+ *   |               GND |<------->| GND    Pin 2 (RX) |<--------| Pin 5 (TX)        |
+ *   |                   |         |        Pin 3 (TX) |-------->| Pin 4 (RX)        |
  *   +-------------------+         +-------------------+         +-------------------+
  *
  * Pins 2 und 3 sind die Empfangs- und Sendepins des ersten Sofware Serial Ports, Pins 4 und 5
