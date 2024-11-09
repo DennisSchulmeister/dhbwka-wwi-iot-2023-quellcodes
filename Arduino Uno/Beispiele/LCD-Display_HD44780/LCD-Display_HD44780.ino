@@ -10,7 +10,24 @@
  * Hardwareaufbau:
  * ---------------
  *
- * xxx
+ * Siehe Zeilen 24 - 33 unten. RS, RE, D0, ... sind die Anschlüsse am Display. Die Zahlen rechts davon
+ * die Pins am Arduino Uno. Die anderen Anschlüsse des Display werden wie folgt verbunden:
+ *
+ *  - VSS -> Ground
+ *  - VDD -> +5V
+ *  - RW  -> Ground
+ *  - A   -> +5V
+ *  - K   -> Ground
+ *
+ * Damit man das Display lesen kann, muss VEE mit einem Potentiometer zum Einstellen einer variablen
+ * Spannung verbunden werden. Das Poti muss dann so eingestellt werden, dass die Schrift auf dem
+ * Display lesbar ist.
+ *
+ *              +5V
+ *               ⦚
+ *  - VEE ------>⦚
+ *               ⦚
+ *            Ground
  *
  * Relevante Dokumentation
  * -----------------------
