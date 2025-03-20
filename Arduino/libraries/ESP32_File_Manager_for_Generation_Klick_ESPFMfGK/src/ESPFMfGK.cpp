@@ -12,11 +12,26 @@
 #include <LittleFS.h>
 #include <SD_MMC.h>
 #include <FFat.h>
-#include <detail/RequestHandlersImpl.h>
+#include <detail/mimetable.h>
 
+
+// copy of static String getContentType(const String &path) from detail/RequestHandlersImpl.h
+// decorated with some "mime::"
 String getContentType(const String &path)
 {
-  return StaticRequestHandler::getContentType(path);
+    char buff[sizeof(mime::mimeTable[0].mimeType)];
+
+    // Check all entries but last one for match, return if found
+    for (size_t i = 0; i < sizeof(mime::mimeTable) / sizeof(mime::mimeTable[0]) - 1; i++) {
+      strcpy_P(buff, mime::mimeTable[i].endsWith);
+      if (path.endsWith(buff)) {
+        strcpy_P(buff, mime::mimeTable[i].mimeType);
+        return String(buff);
+      }
+    }
+    // Fall-through and just return default type
+    strcpy_P(buff, mime::mimeTable[sizeof(mime::mimeTable) / sizeof(mime::mimeTable[0]) - 1].mimeType);
+    return String(buff);
 }
 
 //*****************************************************************************************************
@@ -38,6 +53,7 @@ bool ESPFMfGK::begin()
 {
   if (fsinfo[0].filesystem == NULL)
   {
+    Serial.println("Panic: FileManager not started. No filesystem added.");
     return false;
   }
 
@@ -168,28 +184,42 @@ bool ESPFMfGK::isFileManagerInternalFile(String fn)
 
 //*****************************************************************************************************
 //*****************************************************************************************************
+bool ESPFMfGK::fileManagerAuthCall() {
+  if ((HttpUsername!="") && (!fileManager->authenticate(HttpUsername.c_str(), HttpPassword.c_str()))) {
+    fileManager->requestAuthentication();
+    return true; 
+  }
+  return false;
+}
+
+//*****************************************************************************************************
+//*****************************************************************************************************
 void ESPFMfGK::fileManagerNotFound(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   String uri = fileManager->uri();
 
 #ifdef fileManagerServerStaticsInternallyDeflate
   if ((uri == "/fm.html") || (uri == "/"))
   {
-    Serial.println("senddeflat");
+    //Serial.println("senddeflat");
     fileManager->sendHeader("Content-Encoding", "deflate");
     fileManager->send_P(200, "text/html", ESPFMfGKWpindexpageDeflate, sizeof(ESPFMfGKWpindexpageDeflate));
     return;
   }
   if (uri == "/fm.css")
   {
-    Serial.println("senddeflat");
+    //Serial.println("senddeflat");
     fileManager->sendHeader("Content-Encoding", "deflate");
     fileManager->send_P(200, "text/css", ESPFMfGKWpcssDeflate, sizeof(ESPFMfGKWpcssDeflate));
     return;
   }
   if (uri == "/fm.js")
   {
-    Serial.println("senddeflat");
+    //Serial.println("senddeflat");
     fileManager->sendHeader("Content-Encoding", "deflate");
     fileManager->send_P(200, "text/javascript", ESPFMfGKWpjavascriptDeflate, sizeof(ESPFMfGKWpjavascriptDeflate));
     return;
@@ -302,18 +332,30 @@ String ESPFMfGK::dispFileString(uint64_t fs, bool printorg)
 //*****************************************************************************************************
 void ESPFMfGK::fileManagerIndexpage(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+  
   fileManager->send(200, F("text/html"), FPSTR(ESPFMfGKWpindexpage));
 }
 
 //*****************************************************************************************************
 void ESPFMfGK::fileManagerJS(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   fileManager->send(200, F("text/javascript"), FPSTR(ESPFMfGKWpjavascript));
 }
 
 //*****************************************************************************************************
 void ESPFMfGK::fileManagerCSS(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   fileManager->send(200, F("text/css"), FPSTR(ESPFMfGKWpcss));
 }
 
@@ -421,6 +463,7 @@ int ESPFMfGK::getFileSystemIndex(bool uselastFileSystemIndex)
 */
 
 //*****************************************************************************************************
+// flat view
 void ESPFMfGK::recurseFolderList(String foldername, int maxtiefe, int tiefe)
 {
   int fsi = getFileSystemIndex(false);
@@ -432,28 +475,36 @@ void ESPFMfGK::recurseFolderList(String foldername, int maxtiefe, int tiefe)
   {
     if (file.isDirectory())
     {
-      if (!(String(file.path()).startsWith(svi)))
+      uint32_t flags = ~0;
+      // Show this folder?
+      if (checkFileFlags != NULL)
       {
-        /** /
-        Serial.print("Pfad: ");
-        Serial.println(String(file.path()));
-        Serial.print("Name: ");
-        Serial.println(String(file.name()));
-        /**/
-        uint32_t flags = ~0;
-        if (checkFileFlags != NULL)
-        {
-          flags = checkFileFlags(*fsinfo[fsi].filesystem, String(file.path()) + "/", 0);
-        }
-        if (!(flags & ESPFMfGK::flagIsNotVisible))
-        {
-          fileManager->sendContent(String(tiefe) + ":" + DeUmlautFilename(String(file.path())));
-          fileManager->sendContent(itemtrenner); // 0
-        }
+        flags = checkFileFlags(*fsinfo[fsi].filesystem, String(file.path()) + "/", flagCheckIsPathname);
       }
-      if (tiefe < maxtiefe)
+      if (!(flags & ESPFMfGK::flagIsNotVisible))
       {
-        recurseFolderList(file.path(), maxtiefe, tiefe + 1);
+        if (!(String(file.path()).startsWith(svi)))
+        {
+          /** /
+          Serial.print("Pfad: ");
+          Serial.println(String(file.path()));
+          Serial.print("Name: ");
+          Serial.println(String(file.name()));
+          /**/
+          if (checkFileFlags != NULL)
+          {
+            flags = checkFileFlags(*fsinfo[fsi].filesystem, String(file.path()) + "/", flagCheckIsPathname);
+          }
+          if (!(flags & ESPFMfGK::flagIsNotVisible))
+          {
+            fileManager->sendContent(String(tiefe) + ":" + DeUmlautFilename(String(file.path())));
+            fileManager->sendContent(itemtrenner); // 0
+          }
+        }
+        if (tiefe < maxtiefe)
+        {
+          recurseFolderList(file.path(), maxtiefe, tiefe + 1);
+        }
       }
     }
     file = root.openNextFile();
@@ -534,9 +585,16 @@ void ESPFMfGK::recurseFolder(String foldername, bool flatview, int maxtiefe, boo
   {
     if (file.isDirectory())
     {
-      if (flatview)
+      uint32_t flags = ~0;
+      if (checkFileFlags != NULL)
       {
-        recurseFolder(file.path(), flatview, maxtiefe, false, linecounter);
+        flags = checkFileFlags(*fsinfo[fsi].filesystem, String(file.path()) + "/", flagCheckIsPathname);
+      }
+      if (!(flags & ESPFMfGK::flagIsNotVisible)) {
+        if (flatview)
+        {
+          recurseFolder(file.path(), flatview, maxtiefe, false, linecounter);
+        }
       }
     }
     else
@@ -553,7 +611,7 @@ void ESPFMfGK::recurseFolder(String foldername, bool flatview, int maxtiefe, boo
         uint32_t flags = ~0;
         if (checkFileFlags != NULL)
         {
-          flags = checkFileFlags(*fsinfo[fsi].filesystem, file.name(), 0);
+          flags = checkFileFlags(*fsinfo[fsi].filesystem, file.name(), flagCheckIsFilename);
         }
         if (!gzipperexists)
         {
@@ -562,17 +620,35 @@ void ESPFMfGK::recurseFolder(String foldername, bool flatview, int maxtiefe, boo
 
         if (!(flags & ESPFMfGK::flagIsNotVisible))
         {
-          String cache = String(file.path());
+          String cache = String(file.path());                  // 0
           cache += itemtrenner;
-          cache += DeUmlautFilename(String(file.path()));
+          cache += DeUmlautFilename(String(file.path()));      // 1
           cache += itemtrenner;
-          cache += dispFileString(file.size(), false);
+          cache += dispFileString(file.size(), false);         // 2
           cache += itemtrenner;
-          cache += colorline(linecounter);
+          cache += colorline(linecounter);                     // 3
           cache += itemtrenner;
-          cache += String(flags);
+          cache += String(flags);                              // 4
+          cache += itemtrenner;
+
+          time_t fd = 0;
+          if (FileDateDisplay != fddNone) {
+            fd = file.getLastWrite() * 10 + (int)FileDateDisplay;
+          }
+          cache += String(fd);                                 // 5
           cache += itemtrenner;
           fileManager->sendContent(cache);
+
+          /*
+          coming soon...
+          file.getLastWrite();
+          struct tm *tmstruct = localtime(&t);
+          Serial.printf(
+            "  LAST WRITE: %d-%02d-%02d %02d:%02d:%02d\n", (tmstruct->tm_year) + 1900, (tmstruct->tm_mon) + 1, tmstruct->tm_mday, tmstruct->tm_hour,
+            tmstruct->tm_min, tmstruct->tm_sec
+          );
+          */
+    
 
           /** /
           fileManager->sendContent(String(file.path()));                   // .path() ist fqfn, .name() nur fn?
@@ -597,6 +673,10 @@ void ESPFMfGK::recurseFolder(String foldername, bool flatview, int maxtiefe, boo
 //*****************************************************************************************************
 void ESPFMfGK::fileManagerFileListInsert(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   // get the file system. all safe.
   int fsi = getFileSystemIndex();
   bool sit = ShowInTreeView();
@@ -690,6 +770,10 @@ String ESPFMfGK::escapeHTMLcontent(String html)
 //*****************************************************************************************************
 void ESPFMfGK::fileManagerBootinfo(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   // hier kann man die globalen Stati initialisieren, weil man weiß, dass die Webseite gerade frisch geladen wird.
   lastFileSystemIndex = -1;
 
@@ -812,7 +896,10 @@ int ESPFMfGK::getFSidxfromFilename(String fn)
   int i = fn.indexOf(":");
   if (i > -1)
   {
-    fn = fn.substring(0, i - 1);
+    fn = fn.substring(0, i);
+    if (fn.startsWith("/")) {
+      fn.remove(0,1);
+    }
     int fnidx = fn.toInt();
     // Limits
     if ((fnidx < 0) || (fnidx >= maxfilesystem))
@@ -836,7 +923,7 @@ String ESPFMfGK::getCleanFilename(String fn)
   int i = fn.indexOf(":");
   if (i > -1)
   {
-    return fn.substring(i + 1, fn.length() - 2);
+    return fn.substring(i + 1, fn.length()); // from to
   }
   else
   {
@@ -847,6 +934,12 @@ String ESPFMfGK::getCleanFilename(String fn)
 //*****************************************************************************************************
 bool ESPFMfGK::CopyMoveFile(String oldfilename, String newfilename, bool move)
 {
+  /** /
+  Serial.println("ofn1: "+oldfilename);
+  Serial.println("nfn1: "+newfilename);
+  Serial.println("move: "+String(move));
+  /**/
+
   // Zusammensuchen der FilesystemIndizes
   int fsiofn = getFSidxfromFilename(oldfilename);
   int fsinfn = getFSidxfromFilename(newfilename);
@@ -864,6 +957,11 @@ bool ESPFMfGK::CopyMoveFile(String oldfilename, String newfilename, bool move)
   oldfilename = getCleanFilename(oldfilename);
   newfilename = getCleanFilename(newfilename);
 
+  /** /
+  Serial.println("ofn2: "+oldfilename);
+  Serial.println("nfn2: "+newfilename);
+  /**/
+
   // Neuen Ordner bauen, vorsichtshalber. Stückweise.
   int i = 1;
   String pn = pathname(newfilename);
@@ -876,6 +974,19 @@ bool ESPFMfGK::CopyMoveFile(String oldfilename, String newfilename, bool move)
     i++;
   }
   fsinfo[fsinfn].filesystem->mkdir(pn);
+
+  /** /
+  Serial.println("ofn3: "+oldfilename);
+  Serial.println("ofn3 fs: "+fsinfo[fsiofn].fsname);
+  Serial.println("nfn3: "+newfilename);
+  Serial.println("nfn3 fs: "+fsinfo[fsinfn].fsname);
+  /**/
+
+  // Upsi.
+  if ((fsinfn==fsiofn) && (newfilename==oldfilename)) {
+    Serial.println(F("CMF: newfile==oldfile, fail."));
+    return false;
+  }
 
   File oldfile = fsinfo[fsiofn].filesystem->open(oldfilename, FILE_READ);
   File newfile = fsinfo[fsinfn].filesystem->open(newfilename, FILE_WRITE);
@@ -927,6 +1038,10 @@ bool ESPFMfGK::CopyMoveFile(String oldfilename, String newfilename, bool move)
 // sets the file system, checks the allowance flags and file existance
 void ESPFMfGK::fileManagerJobber(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   if (fileManager->args() >= 3)
   { // https://www.youtube.com/watch?v=KSxTxynXiBs
     String jobname = fileManager->arg("job");
@@ -965,13 +1080,14 @@ void ESPFMfGK::fileManagerJobber(void)
         Illegal404();
         return;
       }
-      if (!newfn.startsWith("/"))
+      // kein Pfad am Anfang und kein Filesystem-Kenner
+      if ((!newfn.startsWith("/")) && (newfn.indexOf(":")==-1))
       {
         newfn = "/" + newfn;
       }
       int fsi = getFileSystemIndex();
 
-      if (checkFileFlags(*fsinfo[fsi].filesystem, newfn, flagCanRename | flagIsValidTargetFilename) & flagCanRename == 0)
+      if ((checkFileFlags(*fsinfo[fsi].filesystem, newfn, flagCanRename | flagIsValidTargetFilename) & flagCanRename) == 0)
       {
         Serial.println("Ren: No access.");
         Illegal404();
@@ -1119,6 +1235,10 @@ void ESPFMfGK::fileManagerJobber(void)
 //*****************************************************************************************************
 void ESPFMfGK::HtmlIncludesInterface(void)
 {
+  if (fileManagerAuthCall()) {
+    return; 
+  }
+
   if (HtmlIncludesCallback)
   {
     if (!HtmlIncludesCallback(fileManager))
@@ -1229,7 +1349,7 @@ void ESPFMfGK::fileManagerReceiverOK(void)
 void ESPFMfGK::fileManagerReceiver(void)
 {
   HTTPUpload &upload = fileManager->upload();
-  Serial.println("Server upload Status: " + String(upload.status));
+  // Serial.println("Server upload Status: " + String(upload.status));
 
   if (upload.status == UPLOAD_FILE_START)
   {
@@ -1274,7 +1394,13 @@ void ESPFMfGK::fileManagerReceiver(void)
     // cut length
     fn = CheckFileNameLengthLimit(fn);
 
-    if (checkFileFlags(*fsinfo[fsi].filesystem, fn, flagCanUpload | flagIsValidTargetFilename) & flagCanUpload == 0)
+    // https://github.com/holgerlembke/ESPFMfGK/issues/13
+    if ((checkFileFlags(*fsinfo[fsi].filesystem, fn, flagCanUpload) & flagCanUpload) == 0)
+    {
+      return;
+    }
+
+    if ((checkFileFlags(*fsinfo[fsi].filesystem, fn, flagIsValidTargetFilename) & flagIsValidTargetFilename) != 0)
     {
       return;
     }
@@ -1305,8 +1431,10 @@ void ESPFMfGK::fileManagerReceiver(void)
       fsUploadFile.close();
       // fsUploadFile = NULL;
     }
+    /** /
     Serial.print("handleFileUpload Size: ");
     Serial.println(upload.totalSize);
+    /**/
   }
 }
 
@@ -1354,11 +1482,13 @@ String ESPFMfGK::DeUmlautFilename(String fn)
 // total/used are not exposed in FS::FS. Who knows why.
 uint64_t ESPFMfGK::totalBytes(fs::FS *fs)
 {
+#ifdef SOC_SDMMC_HOST_SUPPORTED
   if (fs == &SD_MMC)
   {
     return SD_MMC.totalBytes();
-  }
-  else if (fs == &SD)
+  } else 
+#endif  
+  if (fs == &SD)
   {
     return SD.totalBytes();
   }
@@ -1379,11 +1509,13 @@ uint64_t ESPFMfGK::totalBytes(fs::FS *fs)
 //*****************************************************************************************************
 uint64_t ESPFMfGK::usedBytes(fs::FS *fs)
 {
+#ifdef SOC_SDMMC_HOST_SUPPORTED
   if (fs == &SD_MMC)
   {
     return SD_MMC.usedBytes();
-  }
-  else if (fs == &SD)
+  } else 
+#endif  
+  if (fs == &SD)
   {
     return SD.usedBytes();
   }

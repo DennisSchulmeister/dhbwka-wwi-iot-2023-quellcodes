@@ -1,5 +1,7 @@
 // Adds the filé systems
 void addFileSystems(void) {
+  // set configTzTime() in setup() to get valid file dates. Otherwise they are kaputt[tm].
+
   // This adds the Storage into the Filemanager. You have to at least call one of those.
   // If you don't, begin() will fail. Because a Filemanager without files is useless.
 
@@ -36,6 +38,30 @@ void addFileSystems(void) {
 }
 
 uint32_t checkFileFlags(fs::FS &fs, String filename, uint32_t flags) {
+  // Show file/path in Lists 
+  // filenames start without "/", pathnames start with "/"
+  if (flags & (ESPFMfGK::flagCheckIsFilename | ESPFMfGK::flagCheckIsPathname)) {
+    /** /
+    Serial.print("flagCheckIsFilename || flagCheckIsPathname check: ");
+    Serial.println(filename);
+    /**/
+    if (flags | ESPFMfGK::flagCheckIsFilename) {
+      if (filename.startsWith(".")) {
+        // Serial.println(filename + " flagIsNotVisible");
+        return ESPFMfGK::flagIsNotVisible;
+      }
+    }
+    /*
+       this will catch a pathname like /.test, but *not* /foo/.test
+       so you might use .indexOf()
+    */
+    if (flags | ESPFMfGK::flagCheckIsPathname) {
+      if (filename.startsWith("/.")) {
+        // Serial.println(filename + " flagIsNotVisible");
+        return ESPFMfGK::flagIsNotVisible;
+      }
+    }
+  }
 
   // this will hide system files (in my world, system files start with a dot)
   if (filename.startsWith("/.")) {
@@ -88,6 +114,13 @@ void setupFilemanager(void) {
   filemgr.WebPageTitle = "FileManager";
   filemgr.BackgroundColor = "white";
   filemgr.textareaCharset = "accept-charset=\"utf-8\"";
+
+  // If you want authentication
+  // filemgr.HttpUsername = "my";
+  // filemgr.HttpPassword = "secret";
+
+  // display the file date? change here. does not work well if you never set configTzTime()
+  // filemgr.FileDateDisplay = ESPFMfGK::fddNone;
 
   if ((WiFi.status() == WL_CONNECTED) && (filemgr.begin())) {
     Serial.print(F("Open Filemanager with http://"));

@@ -91,7 +91,6 @@ void loop() {
     Serial.println("Sende Nachricht!");
     mqtt_client.publish(mqtt_broker.publish_topic, "Der ESP32 sagt hallo!");
   }
-  
 }
 
 
