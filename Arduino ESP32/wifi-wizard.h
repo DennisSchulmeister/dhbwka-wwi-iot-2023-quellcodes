@@ -47,6 +47,9 @@ void wifi_wizard() {
         case WIFI_AUTH_WPA_WPA2_PSK:
           Serial.println("WPA_WPA2_PSK");
           break;
+        case WIFI_AUTH_WPA_WPA2_WPA3_PSK:
+          Serial.println("WPA_WPA2_WPA3_PSK");
+          break;
         case WIFI_AUTH_WPA2_ENTERPRISE:
           Serial.println("WPA2_ENTERPRISE");
           break;
@@ -77,7 +80,8 @@ void wifi_wizard() {
 
       case WIFI_AUTH_WPA_PSK:
       case WIFI_AUTH_WPA2_PSK:
-      case WIFI_AUTH_WPA_WPA2_PSK: {
+      case WIFI_AUTH_WPA_WPA2_PSK
+      case WIFI_AUTH_WPA_WPA2_WPA3_PSK: {
         String password = serial_input("Bitte WLAN-Passwort eingeben:\n");
 
         WiFi.begin(ssid.c_str(), password.c_str());
