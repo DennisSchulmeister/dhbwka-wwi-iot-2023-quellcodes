@@ -60,7 +60,7 @@
  *  - Pin 17: Digital 11 -> D5
  *  - Pin 18: Digital 12 -> D6
  *  - Pin 19: Digital 13 -> D7
- *                          VSS -> Griound
+ *                          VSS -> Ground
  *                          VDD -> +5V
  *                          V0 --> Potentiometer -> +5V/Ground (einstellbarer Spannungsteiler!)
  *                          RW --> Ground
@@ -77,8 +77,8 @@
  *  - Pin 7: GND ------------------> Mikrocontroller GND
  *
  * Die Kommunikation basiert auf einem bidirektionalen Austausch von 1-Byte Nachrichten,
- * wobei manche Nachrichte noch Parameter beinhalten. Das Übertragungsformat ist 8N1
- * (Default bei Arduino) bei 9600 Baud Übertragungsrate.
+ * wobei manche Nachrichten zusätzliche Parameter beinhalten. Das Übertragungsformat ist
+ * 8N1 (Default bei Arduino) bei 9600 Baud Übertragungsrate.
  *
  * ### Mikrocontroller an Atmega
  *
